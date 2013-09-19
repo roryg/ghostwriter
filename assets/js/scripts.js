@@ -7,7 +7,7 @@ jQuery(function($) {
     $('.js-jump-top').on('click', function(e) {
         e.preventDefault();
 
-        $('body').animate({'scrollTop': 0});
+        $('html, body').animate({'scrollTop': 0});
     });
 
     /* ============================================================ */
@@ -46,26 +46,26 @@ jQuery(function($) {
             var $html = $(result);
             var $newContent = $('#ajax-container', $html);
 
-            $('body').animate({'scrollTop': 0}, function() {
-                $ajaxContainer.fadeOut(500, function() {
-                    $latestPost = $('#latest-post', $newContent);
-                    $postIndex = $('#post-index', $newContent);
+            $('html, body').animate({'scrollTop': 0});
 
-                    if (showIndex === true) {
-                        $latestPost.hide();
-                    } else {
-                        $latestPost.show();
-                        $postIndex.hide();
-                    }
+            $ajaxContainer.fadeOut(500, function() {
+                $latestPost = $('#latest-post', $newContent);
+                $postIndex = $('#post-index', $newContent);
 
-                    $ajaxContainer.html($newContent);
-                    $ajaxContainer.fadeIn(500);
+                if (showIndex === true) {
+                    $latestPost.hide();
+                } else {
+                    $latestPost.show();
+                    $postIndex.hide();
+                }
 
-                    NProgress.done();
+                $ajaxContainer.html($newContent);
+                $ajaxContainer.fadeIn(500);
 
-                    loading = false;
-                    showIndex = false;
-                });
+                NProgress.done();
+
+                loading = false;
+                showIndex = false;
             });
         });
     });
@@ -95,22 +95,22 @@ jQuery(function($) {
             } else {
                 // Swap in the latest post or post index as needed
                 if ($(this).hasClass('js-show-index')) {
-                    $('body').animate({'scrollTop': 0}, function() {
-                        NProgress.start();
+                    $('html, body').animate({'scrollTop': 0});
 
-                        $latestPost.fadeOut(300, function() {
-                            $postIndex.fadeIn(300);
-                            NProgress.done();
-                        });
+                    NProgress.start();
+
+                    $latestPost.fadeOut(300, function() {
+                        $postIndex.fadeIn(300);
+                        NProgress.done();
                     });
                 } else {
-                    $('body').animate({'scrollTop': 0}, function() {
-                        NProgress.start();
+                    $('html, body').animate({'scrollTop': 0});
+                    
+                    NProgress.start();
 
-                        $postIndex.fadeOut(300, function() {
-                            $latestPost.fadeIn(300);
-                            NProgress.done();
-                        });
+                    $postIndex.fadeOut(300, function() {
+                        $latestPost.fadeIn(300);
+                        NProgress.done();
                     });
                 }
             }
