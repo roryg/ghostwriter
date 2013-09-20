@@ -1,3 +1,5 @@
 ------------------------------
-Ghostwriter Version 1.0.0
+Ghostwriter Version 1.0.1
 ------------------------------
+
+- Fixed post not displaying on home page (posts.0.content has changed to posts.0.html in ghost 0.3.x)
