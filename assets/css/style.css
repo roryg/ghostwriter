@@ -348,3 +348,7 @@ pre {
         display: block;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .post-title { font-size: 32px; }
+}
