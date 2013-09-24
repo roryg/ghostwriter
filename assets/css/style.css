@@ -271,8 +271,11 @@ pre {
 /* ============================================================ */
 
 .icon {
-    background: url(../images/sprite.png);
+    background: url(../images/sprite-28-76-2x.png) no-repeat;
+    background-size: 14px 38px;
     display: block;
+    height: 38px;
+    width: 14px;
 }
 
 .icon-menu {
