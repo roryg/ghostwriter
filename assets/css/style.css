@@ -108,6 +108,7 @@ pre {
 .button-square {
     background: #F03838;
     float: left;
+    margin: 0 0 0 10px;
     padding: 8px;
 }
 
@@ -133,7 +134,7 @@ pre {
     float: left;
     font-size: 14px;
     font-weight: 600;
-    margin: 0 10px 0 0;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -283,6 +284,12 @@ pre {
 .icon-up {
     background-position: 0 -15px;
     height: 8px;
+    width: 14px;
+}
+
+.icon-rss {
+    background-position: 0 -24px;
+    height: 14px;
     width: 14px;
 }
 
