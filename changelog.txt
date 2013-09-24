@@ -1,4 +1,11 @@
 ------------------------------
+Ghostwriter Version 1.1.0
+------------------------------
+
+- Added RSS link to the header.
+- Made the icons retina ready.
+
+------------------------------
 Ghostwriter Version 1.0.1
 ------------------------------
 
