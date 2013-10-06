@@ -58,8 +58,8 @@ blockquote p {
 img {
     display: block;
     margin: 40px 0;
-    width: 100%;
-        max-width: 809px;
+    width: auto;
+    max-width: 100%;
 }
 
 pre {
