@@ -1,4 +1,13 @@
 ------------------------------
+Ghostwriter Version 1.2.0
+------------------------------
+
+- (SimonKberg) Updated responsive image CSS
+- (SimonKberg) Added titles to links
+- (SimonKberg) Fixed Ghost meta tags
+- (SimonKberg) Fixed double ajax containers
+
+------------------------------
 Ghostwriter Version 1.1.0
 ------------------------------
 
