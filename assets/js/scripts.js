@@ -44,13 +44,13 @@ jQuery(function($) {
         // with the loaded content
         $.get(State.url, function(result) {
             var $html = $(result);
-            var $newContent = $('#ajax-container', $html);
+            var $newContent = $('#ajax-container', $html).contents();
 
             $('html, body').animate({'scrollTop': 0});
 
             $ajaxContainer.fadeOut(500, function() {
-                $latestPost = $('#latest-post', $newContent);
-                $postIndex = $('#post-index', $newContent);
+                $latestPost = $newContent.filter('#latest-post');
+                $postIndex = $newContent.filter('#post-index');
 
                 if (showIndex === true) {
                     $latestPost.hide();
@@ -69,7 +69,7 @@ jQuery(function($) {
             });
         });
     });
-    
+
     $('body').on('click', '.js-ajax-link, .pagination a', function(e) {
         e.preventDefault();
 
@@ -105,7 +105,7 @@ jQuery(function($) {
                     });
                 } else {
                     $('html, body').animate({'scrollTop': 0});
-                    
+
                     NProgress.start();
 
                     $postIndex.fadeOut(300, function() {
