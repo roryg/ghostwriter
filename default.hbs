@@ -4,7 +4,7 @@
     {{! Document Settings }}
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
+
     {{! Page Meta }}
     <title>{{@blog.title}}</title>
     <meta name="description" content="{{@blog.description}}" />
@@ -12,13 +12,13 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     {{! Styles }}
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/nprogress.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" />
-    
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
@@ -27,7 +27,7 @@
     <header class="site-header">
         <div class="container">
             <div class="site-title-wrapper">
-                <h1 class="site-title"><a class="js-ajax-link" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
 
                 <a class="button-square js-ajax-link js-show-index" href="{{@blog.url}}"><span class="icon icon-menu"></span></a>
 
@@ -45,7 +45,7 @@
     <footer class="footer">
         <div class="container">
             <div class="site-title-wrapper">
-                <h1 class="site-title"><a class="js-ajax-link" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
 
                 <a class="button-square button-jump-top js-jump-top" href="#"><span class="icon icon-up"></span></a>
             </div>
