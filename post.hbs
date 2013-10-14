@@ -7,6 +7,7 @@
                 <h1 class="post-title">{{title}}</h1>
 
                 <p class="post-date"><time datetime="{{published_at}}">Published {{date format="MMMM Do YYYY"}}</time></p>
+                {{#if tags}}<p class="post-tags"> {{tags separator=", "}}</p>{{/if}}
             </header>
 
             <div class="post-content">

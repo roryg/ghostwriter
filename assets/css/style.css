@@ -171,6 +171,14 @@ pre {
     text-transform: uppercase;
 }
 
+.post-tags {
+    color: #AEADAD;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 25px 0 0;
+}
+
 .post-date {
     color: #AEADAD;
     font-size: 14px;
