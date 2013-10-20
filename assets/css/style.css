@@ -1,6 +1,10 @@
 /* ============================================================ */
 /* Base */
 /* ============================================================ */
+html, body {
+  height: 100%;
+}
+
 body {
   background: #fefefe;
   color: #424242;
@@ -111,6 +115,19 @@ pre {
   max-width: 889px;
 }
 
+#wrapper {
+  height: auto;
+  min-height: 100%;
+  /* This must be the same as the height of the footer */
+  margin-bottom: -265px;
+}
+#wrapper:after {
+  content: "";
+  display: block;
+  /* This must be the same as the height of the footer */
+  height: 265px;
+}
+
 .button {
   background: #303030;
   border: none;
@@ -139,7 +156,7 @@ pre {
 /* Site Header */
 /* ============================================================ */
 .site-header {
-  margin: 100px 0 35px;
+  padding: 100px 0 35px;
   overflow: auto;
   text-align: center;
   text-transform: uppercase;
@@ -334,10 +351,11 @@ pre {
 .footer {
   background: #303030;
   color: #D3D3D3;
-  padding: 80px 0 95px;
+  height: 265px;
+  overflow: auto;
 }
 .footer .site-title-wrapper {
-  margin-bottom: 35px;
+  margin: 80px auto 35px;
 }
 .footer .site-title a:hover,
 .footer .button-square:hover {

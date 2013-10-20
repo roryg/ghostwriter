@@ -10,6 +10,8 @@ $background: #FEFEFE;
 /* Base */
 /* ============================================================ */
 
+html, body { height: 100%; }
+
 body {
     background: $background;
     color: #424242;
@@ -101,6 +103,20 @@ pre {
     max-width: 889px;
 }
 
+#wrapper {
+    height: auto;
+        min-height: 100%;
+    /* This must be the same as the height of the footer */
+    margin-bottom: -265px;
+
+    &:after {
+        content: "";
+        display: block;
+        /* This must be the same as the height of the footer */
+        height: 265px;
+    }
+}
+
 .button {
     background: $secondary;
     border: none;
@@ -128,7 +144,7 @@ pre {
 /* ============================================================ */
 
 .site-header {
-    margin: 100px 0 35px;
+    padding: 100px 0 35px;
     overflow: auto;
     text-align: center;
     text-transform: uppercase;
@@ -322,9 +338,10 @@ pre {
 .footer {
     background: $secondary;
     color: #D3D3D3;
-    padding: 80px 0 95px;
+    height: 265px;
+    overflow: auto;
 
-    .site-title-wrapper { margin-bottom: 35px; }
+    .site-title-wrapper { margin: 80px auto 35px; }
 
     .site-title a:hover,
     .button-square:hover {
