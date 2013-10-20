@@ -11,6 +11,10 @@
 
             <div class="post-content">
                 {{{content}}}
+
+                {{#if tags}}
+                    <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
+                {{/if}}
             </div>
         </article>
     {{/post}}
