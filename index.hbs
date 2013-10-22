@@ -1,17 +1,30 @@
 {{!< default}}
 
 <div id="latest-post" class="container">
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <h1 class="post-title">{{posts.0.title}}</h1>
+    {{#foreach posts}}
+        {{#if @first}}
+            <article class="{{post_class}}">
+                <header class="post-header">
+                    <h1 class="post-title">{{title}}</h1>
 
-            <p class="post-date"><time datetime="{{posts.0.published_at}}">Published {{date posts.0.published_at format="MMMM Do YYYY"}}</time></p>
+<<<<<<< HEAD
+            <p class="post-date"><time datetime="{{posts.0.published_at}}">Published {{date posts.0.published_at format="Do MMMM YYYY"}}</time></p>
         </header>
+=======
+                    <p class="post-date"><time datetime="{{published_at}}">Published {{date format="MMMM Do YYYY"}}</time></p>
+                </header>
+>>>>>>> c2f34af4622316dc609469322ce8e9a4b2bbf6a6
 
-        <div class="post-content">
-            {{{posts.0.html}}}
-        </div>
-    </article>
+                <div class="post-content">
+                    {{{content}}}
+
+                    {{#if tags}}
+                        <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
+                    {{/if}}
+                </div>
+            </article>
+        {{/if}}
+    {{/foreach}}
 </div>
 
 <div id="post-index" class="container">
@@ -21,7 +34,7 @@
                 <a class="js-ajax-link"  title="{{title}}" href="{{url}}">
                     <h4 class="post-stub-title">{{title}}</h4>
 
-                    <time class="post-stub-date" datetime="{{published_at}}">Published {{date format="MMMM Do YYYY"}}</time>
+                    <time class="post-stub-date" datetime="{{published_at}}">Published {{date format="Do MMMM YYYY"}}</time>
                 </a>
             </li>
         {{/foreach}}

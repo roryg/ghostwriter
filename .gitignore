@@ -1,1 +1,6 @@
 node_modules
+assets/sass/.sass-cache
+assets/js/site.js
+assets/js/site.min.js
+assets/css/site.css
+assets/css/site.min.css

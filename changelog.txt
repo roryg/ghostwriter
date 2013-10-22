@@ -1,4 +1,14 @@
 ------------------------------
+Ghostwriter Version 1.3.0
+------------------------------
+
+- Added .scss file for working with SASS
+- Added icon sprite PSD
+- Added tags to the bottom of posts
+- Fixed footer so that it sticks to the bottom when their isn't enough content on a page
+- (jpkrohling) Fixed font loading on https
+
+------------------------------
 Ghostwriter Version 1.2.0
 ------------------------------
 
