@@ -187,13 +187,15 @@ pre {
   margin: 15px 0;
   text-transform: uppercase; }
 
-.post-date {
+.post-date,
+.blog-description {
   color: #AEADAD;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
   margin: 25px 0 0; }
-  .post-date:after {
+  .post-date:after,
+  .blog-description:after {
     border-bottom: 1px dotted #303030;
     content: "";
     display: block;
