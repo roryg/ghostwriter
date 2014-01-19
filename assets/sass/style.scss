@@ -138,9 +138,11 @@ pre {
 
 .button-square {
     background: $primary;
+    color: #FFF;
     float: left;
+    font-size: 17px;
     margin: 0 0 0 10px;
-    padding: 8px;
+    padding: 3px 8px 4px;
 
     &:hover { background: $secondary; }
 }
@@ -323,36 +325,6 @@ pre {
 }
 
 /* ============================================================ */
-/* Icons */
-/* ============================================================ */
-
-.icon {
-    background: url(../images/sprite-28-76-2x.png) no-repeat;
-    background-size: 14px 38px;
-    display: block;
-    height: 38px;
-    width: 14px;
-}
-
-.icon-menu {
-    background-position: 0 0;
-    height: 14px;
-    width: 14px;
-}
-
-.icon-up {
-    background-position: 0 -15px;
-    height: 8px;
-    width: 14px;
-}
-
-.icon-rss {
-    background-position: 0 -24px;
-    height: 14px;
-    width: 14px;
-}
-
-/* ============================================================ */
 /* Footer */
 /* ============================================================ */
 
@@ -368,11 +340,12 @@ pre {
     .button-square:hover {
         background: #121212;
     }
-}
 
-.button-jump-top {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    .button-jump-top {
+        font-size: 23px;
+        line-height: 1.1;
+        padding-top: 1px;
+    }
 }
 
 .footer-copyright {
