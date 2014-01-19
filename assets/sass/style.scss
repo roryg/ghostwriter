@@ -47,7 +47,13 @@ ul, ol {
     margin: 0 0 40px;
     padding: 0;
 
-    li { margin: 0 0 10px; }
+    ul, ol { margin: 10px 0 0 20px; }
+
+    li {
+        margin: 0 0 10px;
+
+        &:last-of-type { margin-bottom: 0; }
+    }
 }
 
 blockquote {

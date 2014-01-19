@@ -49,8 +49,12 @@ ul, ol {
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin: 10px 0 0 20px; }
   ul li, ol li {
     margin: 0 0 10px; }
+    ul li:last-of-type, ol li:last-of-type {
+      margin-bottom: 0; }
 
 blockquote {
   border-left: 1px dotted #303030;
