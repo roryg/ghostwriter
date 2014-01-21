@@ -252,7 +252,8 @@ pre {
 
 .post-stub {
   border-bottom: 1px dotted #303030;
-  margin: 0; }
+  margin: 0;
+  position: relative; }
   .post-stub:first-child {
     padding-top: 0; }
   .post-stub a {
@@ -266,6 +267,18 @@ pre {
       background: #FCF5F5;
       color: #f03838;
       padding: 20px 12px; }
+      .post-stub a:hover .post-stub-tag {
+        background: #f03838; }
+
+.post-stub-tag {
+  background: #303030;
+  border-radius: 3px;
+  color: #FFF;
+  float: right;
+  font-size: 10px;
+  margin: 7px 0 0;
+  padding: 0 5px;
+  text-transform: uppercase; }
 
 .post-stub-title {
   display: inline-block;

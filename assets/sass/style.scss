@@ -68,7 +68,6 @@ blockquote {
         margin: 0;
         width: 100%;
     }
-
 }
 
 img {
@@ -287,6 +286,7 @@ pre {
 .post-stub {
     border-bottom: 1px dotted $secondary;
     margin: 0;
+    position: relative;
 
     &:first-child { padding-top: 0; }
 
@@ -302,8 +302,21 @@ pre {
             background: #FCF5F5;
             color: $primary;
             padding: 20px 12px;
+
+            .post-stub-tag { background: $primary; }
         }
     }
+}
+
+.post-stub-tag {
+    background: $secondary;
+    border-radius: 3px;
+    color: #FFF;
+    float: right;
+    font-size: 10px;
+    margin: 7px 0 0;
+    padding: 0 5px;
+    text-transform: uppercase;
 }
 
 .post-stub-title {
