@@ -226,7 +226,7 @@ table {
 
 #latest-post { display: none; }
 
-.post { margin: 0 40px; }
+.post-container { margin: 0 40px; }
 
 .post-header {
     border-bottom: 6px solid $secondary;
@@ -420,15 +420,36 @@ table {
 /* Media Queries */
 /* ============================================================ */
 
+@media only screen and (max-width: 800px) {
+    .post-stub-tag { display: none; }
+}
+
 @media only screen and (max-width: 600px) {
+    .site-nav-item {
+        display: block;
+        margin: 15px 0;
+    }
+
     .post-stub-title { display: block; }
 
     .post-stub-date:before {
         content: "";
         display: block;
     }
+
+    .post-container,
+    .post-list {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .post-title { font-size: 32px; }
+
+    .post-container,
+    .post-list {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 }
