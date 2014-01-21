@@ -80,6 +80,11 @@ pre {
   margin: 0 0 40px;
   padding: 15px 20px; }
 
+hr {
+  border: none;
+  border-bottom: 1px dotted #303030;
+  margin: 45px 0; }
+
 table {
   margin-bottom: 40px;
   width: 100%; }
