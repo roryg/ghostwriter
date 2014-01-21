@@ -104,6 +104,9 @@ table {
   color: #000;
   display: block; }
 
+.fluid-width-video-wrapper {
+  margin-bottom: 40px; }
+
 /* ============================================================ */
 /* General Appearance */
 /* ============================================================ */
