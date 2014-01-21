@@ -65,6 +65,9 @@ jQuery(function($) {
                     $postIndex.hide();
                 }
 
+                // Re run fitvid.js
+                $newContent.fitVids();
+
                 $ajaxContainer.html($newContent);
                 $ajaxContainer.fadeIn(500);
 
