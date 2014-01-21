@@ -80,6 +80,20 @@ pre {
   margin: 0 0 40px;
   padding: 15px 20px; }
 
+table {
+  margin-bottom: 40px;
+  width: 100%; }
+  table tbody > tr:nth-child(odd) > td,
+  table tbody > tr:nth-child(odd) > th {
+    background-color: #f7f7f3; }
+  table th {
+    padding: 0 10px 10px;
+    text-align: left; }
+  table td {
+    padding: 10px; }
+  table tr {
+    border-bottom: 1px dotted #AEADAD; }
+
 ::selection {
   background: #FFF5B8;
   color: #000;

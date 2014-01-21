@@ -5,6 +5,7 @@ Ghostwriter Version 1.4.0
 - Added a simple navigation menu
 - Added font awesome for icons
 - Added support for featured posts
+- Added basic support for html tables
 - Removed image icons
 - Replaced the browse posts button with a Browse Posts text link in 
   the new navigation menu. This should make finding the posts list
@@ -13,7 +14,7 @@ Ghostwriter Version 1.4.0
 - Set up assets to load with the new asset helper
 
 fitvid.js
-add support for tables
+tweak responsiveness
 
 ------------------------------
 Ghostwriter Version 1.3.0

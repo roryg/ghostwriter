@@ -85,6 +85,25 @@ pre {
     padding: 15px 20px;
 }
 
+table {
+    margin-bottom:40px;
+    width: 100%;
+
+    tbody > tr:nth-child(odd) > td, 
+    tbody > tr:nth-child(odd) > th {
+        background-color: #f7f7f3;
+    }
+
+    th {
+        padding: 0 10px 10px;
+        text-align: left;
+    }
+
+    td { padding: 10px; }
+
+    tr { border-bottom: 1px dotted #AEADAD; }
+}
+
 ::selection {
     background: #FFF5B8;
     color: #000;
