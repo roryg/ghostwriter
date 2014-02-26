@@ -124,6 +124,20 @@ table {
 
 .fluid-width-video-wrapper { margin-bottom: 40px; }
 
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+.clearfix {
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 /* ============================================================ */
 /* General Appearance */
 /* ============================================================ */
@@ -261,19 +275,44 @@ table {
 }
 
 .post-content {
-    margin: 0 0 92px;
-
     a:hover {
         border-bottom: 1px dotted $primary;
         padding: 0 0 2px;
     }
+
+    &:last-child { margin-bottom: 0; }
 }
 
-.post-tags {
+.post-footer { margin-top: 5px; }
+
+.post-tags,
+.share {
     color: #AEADAD;
     font-size: 14px;
 
     span { font-weight: 600; }
+}
+
+.post-tags {
+    float: left;
+    margin: 3px 0 0;
+}
+
+.share {
+    float: right;
+
+    a {
+        background: $primary;
+        color: #FFF;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 5px;
+        padding: 5px 0 4px;
+        width: 30px;
+        text-align: center;
+    }
+
+    a:hover { background: $secondary; }
 }
 
 .post-navigation {
@@ -372,6 +411,7 @@ table {
     background: $secondary;
     color: #D3D3D3;
     height: 265px;
+    margin-top: 95px;
     overflow: auto;
 
     .site-title-wrapper { margin: 80px auto 35px; }
@@ -441,6 +481,17 @@ table {
     .post-list {
         margin-right: 25px;
         margin-left: 25px;
+    }
+
+    .post-tags { width: 100%; }
+
+    .share {
+        float: left;
+        margin-top: 20px;
+
+        a {
+            margin: 0 5px 0 0;
+        }
     }
 }
 

@@ -112,6 +112,16 @@ table {
 .fluid-width-video-wrapper {
   margin-bottom: 40px; }
 
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* ============================================================ */
 /* General Appearance */
 /* ============================================================ */
@@ -230,17 +240,40 @@ table {
     margin: 40px auto 0;
     width: 100px; }
 
-.post-content {
-  margin: 0 0 92px; }
-  .post-content a:hover {
-    border-bottom: 1px dotted #f03838;
-    padding: 0 0 2px; }
+.post-content a:hover {
+  border-bottom: 1px dotted #f03838;
+  padding: 0 0 2px; }
+.post-content:last-child {
+  margin-bottom: 0; }
 
-.post-tags {
+.post-footer {
+  margin-top: 5px; }
+
+.post-tags,
+.share {
   color: #AEADAD;
   font-size: 14px; }
-  .post-tags span {
+  .post-tags span,
+  .share span {
     font-weight: 600; }
+
+.post-tags {
+  float: left;
+  margin: 3px 0 0; }
+
+.share {
+  float: right; }
+  .share a {
+    background: #f03838;
+    color: #FFF;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 5px 0 4px;
+    width: 30px;
+    text-align: center; }
+  .share a:hover {
+    background: #303030; }
 
 .post-navigation {
   display: table;
@@ -324,6 +357,7 @@ table {
   background: #303030;
   color: #D3D3D3;
   height: 265px;
+  margin-top: 95px;
   overflow: auto; }
   .footer .site-title-wrapper {
     margin: 80px auto 35px; }
@@ -381,7 +415,16 @@ table {
   .post-container,
   .post-list {
     margin-right: 25px;
-    margin-left: 25px; } }
+    margin-left: 25px; }
+
+  .post-tags {
+    width: 100%; }
+
+  .share {
+    float: left;
+    margin-top: 20px; }
+    .share a {
+      margin: 0 5px 0 0; } }
 @media only screen and (max-width: 400px) {
   .post-title {
     font-size: 32px; }
