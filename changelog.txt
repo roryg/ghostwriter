@@ -1,4 +1,11 @@
 ------------------------------
+Ghostwriter Version 1.6.0
+------------------------------
+
+- Added package.json file introduced in Ghost 0.4.2
+- Added support for tag index pages
+
+------------------------------
 Ghostwriter Version 1.5.0
 ------------------------------
 
