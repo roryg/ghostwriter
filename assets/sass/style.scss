@@ -285,6 +285,8 @@ table {
     }
 
     &:last-child { margin-bottom: 0; }
+
+    li > p { display: inline; }
 }
 
 .post-footer { margin-top: 5px; }
