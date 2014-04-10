@@ -94,7 +94,7 @@ jQuery(function($) {
 
                 // Check if we need to show the post index after we've
                 // loaded the new content
-                if ($(this).hasClass('js-show-index') || $(this).parent('.pagination').length > 0) {
+                if ($(this).hasClass('js-show-index') || $(this).parent('.pagination').length > 0 || url.indexOf('/tag/') === 0) {
                     showIndex = true;
                 }
 
