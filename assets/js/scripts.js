@@ -69,7 +69,11 @@ jQuery(function($) {
                 $newContent.fitVids();
 
                 $ajaxContainer.html($newContent);
-                $ajaxContainer.fadeIn(500);
+                $ajaxContainer.fadeIn(500, function() {
+                    $ajaxContainer.find('pre code').each(function(i, e) {
+                        hljs.highlightBlock(e)
+                    });
+                });
 
                 NProgress.done();
 
@@ -109,7 +113,11 @@ jQuery(function($) {
                     NProgress.start();
 
                     $latestPost.fadeOut(300, function() {
-                        $postIndex.fadeIn(300);
+                        $postIndex.fadeIn(300, function() {
+                            $postIndex.find('pre code').each(function(i, e) {
+                                hljs.highlightBlock(e)
+                            });
+                        });
                         NProgress.done();
                     });
                 } else {
@@ -118,12 +126,15 @@ jQuery(function($) {
                     NProgress.start();
 
                     $postIndex.fadeOut(300, function() {
-                        $latestPost.fadeIn(300);
+                        $latestPost.fadeIn(300, function() {
+                            $latestPost.find('pre code').each(function(i, e) {
+                                hljs.highlightBlock(e)
+                            });
+                        });
                         NProgress.done();
                     });
                 }
             }
         }
     });
-
 });

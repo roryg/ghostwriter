@@ -18,6 +18,7 @@ Ghostwriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryg
 * Static page support.
 * Featured post support.
 * A bunch of other bits and bobs.
+* Syntax highlight with [Highlight.js](http://highlightjs.org)
 
 ### Static Pages and Navigation
 
