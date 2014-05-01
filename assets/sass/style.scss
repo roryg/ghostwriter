@@ -219,6 +219,11 @@ table {
         &:hover { background: $secondary; }
     }
 }
+.site-logo {
+    display: block;
+
+    img { margin: 0; }
+}
 
 .site-nav {
     list-style: none;

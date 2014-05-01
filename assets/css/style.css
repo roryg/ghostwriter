@@ -191,6 +191,11 @@ table {
     .site-title a:hover {
       background: #303030; }
 
+.site-logo {
+  display: block; }
+  .site-logo img {
+    margin: 0; }
+
 .site-nav {
   list-style: none;
   margin: 28px 0 10px; }

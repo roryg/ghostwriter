@@ -1,4 +1,10 @@
 ------------------------------
+Ghostwriter Version 1.7.0
+------------------------------
+
+- Added support for the blog logo setting
+
+------------------------------
 Ghostwriter Version 1.6.0
 ------------------------------
 
