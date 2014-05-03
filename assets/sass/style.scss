@@ -72,9 +72,16 @@ blockquote {
 
 img {
     display: block;
-    margin: 40px 0;
+    margin: 40px auto;
     width: auto;
     max-width: 100%;
+}
+
+code {
+    background: #F1F0EA;
+    border: 1px solid #DDDBCC;
+    border-radius: 3px;
+    padding: 1px 3px;
 }
 
 pre {
@@ -83,6 +90,12 @@ pre {
     border-radius: 3px;
     margin: 0 0 40px;
     padding: 15px 20px;
+
+    code {
+        border: 0;
+        padding: 0;
+        overflow-x: auto;
+    }
 }
 
 hr {
@@ -240,6 +253,8 @@ table {
 
 #latest-post { display: none; }
 
+#disqus_thread { margin-top: 40px; }
+
 .post-container { margin: 0 40px; }
 
 .post-header {
@@ -306,6 +321,7 @@ table {
 
 .share {
     float: right;
+    margin-top: 2em;
 
     a {
         background: $primary;

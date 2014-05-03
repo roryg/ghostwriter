@@ -1,4 +1,11 @@
 ------------------------------
+Ghostwriter Version 1.7.0
+------------------------------
+
+- Added Hightlight.js syntax highlighting
+- Added Disqus comment integration
+
+------------------------------
 Ghostwriter Version 1.6.0
 ------------------------------
 
