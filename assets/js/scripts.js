@@ -52,6 +52,9 @@ jQuery(function($) {
             var $html = $(result);
             var $newContent = $('#ajax-container', $html).contents();
 
+            // Set the title to the requested urls document title
+            document.title = $html.filter('title').text();
+
             $('html, body').animate({'scrollTop': 0});
 
             $ajaxContainer.fadeOut(500, function() {
