@@ -266,9 +266,6 @@ table {
   .post-tags span,
   .share span {
     font-weight: 600; }
-  .post-tags a:hover,
-  .share a:hover {
-    color: #303030; }
 
 .post-tags {
   float: left;
