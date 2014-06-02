@@ -305,6 +305,7 @@ table {
 .post-tags {
     float: left;
     margin: 3px 0 0;
+    a:hover { color: $secondary; }
 }
 
 .share {
