@@ -1,4 +1,11 @@
 ------------------------------
+Ghostwriter Version 1.7.1
+------------------------------
+
+- (mihneadb) Fixed share buttons colour on hover
+- Added .gitignore and removed sass-cache
+
+------------------------------
 Ghostwriter Version 1.7.0
 ------------------------------
 
