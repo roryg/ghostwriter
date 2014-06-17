@@ -75,6 +75,7 @@ jQuery(function($) {
                 $ajaxContainer.fadeIn(500);
 
                 NProgress.done();
+                $('pre code').each(function(i, e) {hljs.highlightBlock(e)}); 
 
                 loading = false;
                 showIndex = false;
