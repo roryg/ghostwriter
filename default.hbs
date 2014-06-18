@@ -78,5 +78,17 @@
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
     <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        // monkey patch for syntax highlighting
+        if( !NProgress._done ) {
+            NProgress._done = NProgress.done;
+
+            NProgress.done = function(force) {
+                $('pre code').each(function(i, e) {hljs.highlightBlock(e)}); 
+                return NProgress._done(force);
+            };
+            NProgress.done();
+        }
+    </script>
 </body>
 </html>
