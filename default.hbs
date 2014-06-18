@@ -19,7 +19,10 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-
+		<link href="//yandex.st/highlightjs/8.0/styles/default.min.css" rel="stylesheet">
+		<style type="text/css">
+			.hljs { background: inherit; }
+		</style>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
@@ -74,6 +77,18 @@
     <script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+    <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        // monkey patch for syntax highlighting
+        if( !NProgress._done ) {
+            NProgress._done = NProgress.done;
 
+            NProgress.done = function(force) {
+                $('pre code').each(function(i, e) {hljs.highlightBlock(e)}); 
+                return NProgress._done(force);
+            };
+            NProgress.done();
+        }
+    </script>
 </body>
 </html>
