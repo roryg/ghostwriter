@@ -1,0 +1,6 @@
+[submodule "assets/fonts/open-sans"]
+	path = assets/fonts/open-sans
+	url = https://github.com/FontFaceKit/open-sans.git
+[submodule "assets/fonts/font-awesome"]
+	path = assets/fonts/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
