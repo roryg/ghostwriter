@@ -1,20 +1,18 @@
-/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
- * @license MIT */
+/*! NProgress (c) 2013, Rico Sta. Cruz
+ *  http://ricostacruz.com/nprogress */
 
-;(function(root, factory) {
+;(function(factory) {
 
-  if (typeof define === 'function' && define.amd) {
-    define(factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
+  if (typeof module === 'function') {
+    module.exports = factory(this.jQuery || require('jquery'));
   } else {
-    root.NProgress = factory();
+    this.NProgress = factory(this.jQuery);
   }
 
-})(this, function() {
+})(function($) {
   var NProgress = {};
 
-  NProgress.version = '0.1.5';
+  NProgress.version = '0.1.2';
 
   var Settings = NProgress.settings = {
     minimum: 0.08,
@@ -25,9 +23,6 @@
     trickleRate: 0.02,
     trickleSpeed: 800,
     showSpinner: true,
-    barSelector: '[role="bar"]',
-    spinnerSelector: '[role="spinner"]',
-    parent: 'body',
     template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
   };
 
@@ -39,12 +34,7 @@
    *     });
    */
   NProgress.configure = function(options) {
-    var key, value;
-    for (key in options) {
-      value = options[key];
-      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
-    }
-
+    $.extend(Settings, options);
     return this;
   };
 
@@ -67,33 +57,27 @@
     n = clamp(n, Settings.minimum, 1);
     NProgress.status = (n === 1 ? null : n);
 
-    var progress = NProgress.render(!started),
-        bar      = progress.querySelector(Settings.barSelector),
-        speed    = Settings.speed,
-        ease     = Settings.easing;
+    var $progress = NProgress.render(!started),
+        $bar      = $progress.find('[role="bar"]'),
+        speed     = Settings.speed,
+        ease      = Settings.easing;
 
-    progress.offsetWidth; /* Repaint */
+    $progress[0].offsetWidth; /* Repaint */
 
-    queue(function(next) {
+    $progress.queue(function(next) {
       // Set positionUsing if it hasn't already been set
       if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
-
+      
       // Add transition
-      css(bar, barPositionCSS(n, speed, ease));
+      $bar.css(barPositionCSS(n, speed, ease));
 
       if (n === 1) {
         // Fade out
-        css(progress, { 
-          transition: 'none', 
-          opacity: 1 
-        });
-        progress.offsetWidth; /* Repaint */
+        $progress.css({ transition: 'none', opacity: 1 });
+        $progress[0].offsetWidth; /* Repaint */
 
         setTimeout(function() {
-          css(progress, { 
-            transition: 'all ' + speed + 'ms linear', 
-            opacity: 0 
-          });
+          $progress.css({ transition: 'all '+speed+'ms linear', opacity: 0 });
           setTimeout(function() {
             NProgress.remove();
             next();
@@ -176,76 +160,30 @@
   };
 
   /**
-   * Waits for all supplied jQuery promises and
-   * increases the progress as the promises resolve.
-   * 
-   * @param $promise jQUery Promise
-   */
-  (function() {
-    var initial = 0, current = 0;
-    
-    NProgress.promise = function($promise) {
-      if (!$promise || $promise.state() == "resolved") {
-        return this;
-      }
-      
-      if (current == 0) {
-        NProgress.start();
-      }
-      
-      initial++;
-      current++;
-      
-      $promise.always(function() {
-        current--;
-        if (current == 0) {
-            initial = 0;
-            NProgress.done();
-        } else {
-            NProgress.set((initial - current) / initial);
-        }
-      });
-      
-      return this;
-    };
-    
-  })();
-
-  /**
    * (Internal) renders the progress bar markup based on the `template`
    * setting.
    */
 
   NProgress.render = function(fromStart) {
-    if (NProgress.isRendered()) return document.getElementById('nprogress');
+    if (NProgress.isRendered()) return $("#nprogress");
+    $('html').addClass('nprogress-busy');
 
-    addClass(document.documentElement, 'nprogress-busy');
-    
-    var progress = document.createElement('div');
-    progress.id = 'nprogress';
-    progress.innerHTML = Settings.template;
+    var $el = $("<div id='nprogress'>")
+      .html(Settings.template);
 
-    var bar      = progress.querySelector(Settings.barSelector),
-        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
-        parent   = document.querySelector(Settings.parent),
-        spinner;
-    
-    css(bar, {
+    var perc = fromStart ? '-100' : toBarPerc(NProgress.status || 0);
+
+    $el.find('[role="bar"]').css({
       transition: 'all 0 linear',
-      transform: 'translate3d(' + perc + '%,0,0)'
+      transform: 'translate3d('+perc+'%,0,0)'
     });
 
-    if (!Settings.showSpinner) {
-      spinner = progress.querySelector(Settings.spinnerSelector);
-      spinner && removeElement(spinner);
-    }
+    if (!Settings.showSpinner)
+      $el.find('[role="spinner"]').remove();
 
-    if (parent != document.body) {
-      addClass(parent, 'nprogress-custom-parent');
-    }
+    $el.appendTo(document.body);
 
-    parent.appendChild(progress);
-    return progress;
+    return $el;
   };
 
   /**
@@ -253,10 +191,8 @@
    */
 
   NProgress.remove = function() {
-    removeClass(document.documentElement, 'nprogress-busy');
-    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent')
-    var progress = document.getElementById('nprogress');
-    progress && removeElement(progress);
+    $('html').removeClass('nprogress-busy');
+    $('#nprogress').remove();
   };
 
   /**
@@ -264,7 +200,7 @@
    */
 
   NProgress.isRendered = function() {
-    return !!document.getElementById('nprogress');
+    return ($("#nprogress").length > 0);
   };
 
   /**
@@ -334,142 +270,6 @@
     return barCSS;
   }
 
-  /**
-   * (Internal) Queues a function to be executed.
-   */
-
-  var queue = (function() {
-    var pending = [];
-    
-    function next() {
-      var fn = pending.shift();
-      if (fn) {
-        fn(next);
-      }
-    }
-
-    return function(fn) {
-      pending.push(fn);
-      if (pending.length == 1) next();
-    };
-  })();
-
-  /**
-   * (Internal) Applies css properties to an element, similar to the jQuery 
-   * css method.
-   *
-   * While this helper does assist with vendor prefixed property names, it 
-   * does not perform any manipulation of values prior to setting styles.
-   */
-
-  var css = (function() {
-    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
-        cssProps    = {};
-
-    function camelCase(string) {
-      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
-        return letter.toUpperCase();
-      });
-    }
-
-    function getVendorProp(name) {
-      var style = document.body.style;
-      if (name in style) return name;
-
-      var i = cssPrefixes.length,
-          capName = name.charAt(0).toUpperCase() + name.slice(1),
-          vendorName;
-      while (i--) {
-        vendorName = cssPrefixes[i] + capName;
-        if (vendorName in style) return vendorName;
-      }
-
-      return name;
-    }
-
-    function getStyleProp(name) {
-      name = camelCase(name);
-      return cssProps[name] || (cssProps[name] = getVendorProp(name));
-    }
-
-    function applyCss(element, prop, value) {
-      prop = getStyleProp(prop);
-      element.style[prop] = value;
-    }
-
-    return function(element, properties) {
-      var args = arguments,
-          prop, 
-          value;
-
-      if (args.length == 2) {
-        for (prop in properties) {
-          value = properties[prop];
-          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
-        }
-      } else {
-        applyCss(element, args[1], args[2]);
-      }
-    }
-  })();
-
-  /**
-   * (Internal) Determines if an element or space separated list of class names contains a class name.
-   */
-
-  function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  }
-
-  /**
-   * (Internal) Adds a class to an element.
-   */
-
-  function addClass(element, name) {
-    var oldList = classList(element),
-        newList = oldList + name;
-
-    if (hasClass(oldList, name)) return; 
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  }
-
-  /**
-   * (Internal) Removes a class from an element.
-   */
-
-  function removeClass(element, name) {
-    var oldList = classList(element),
-        newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  }
-
-  /**
-   * (Internal) Gets a space separated list of the class names on the element. 
-   * The list is wrapped with a single space on each end to facilitate finding 
-   * matches within the list.
-   */
-
-  function classList(element) {
-    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
-  }
-
-  /**
-   * (Internal) Removes an element from the DOM.
-   */
-
-  function removeElement(element) {
-    element && element.parentNode && element.parentNode.removeChild(element);
-  }
-
   return NProgress;
 });
+
