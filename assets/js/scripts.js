@@ -126,6 +126,7 @@ jQuery(function($) {
                     });
                 }
             }
+
         }
     });
 
