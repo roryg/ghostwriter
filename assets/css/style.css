@@ -242,6 +242,12 @@ table {
   font-weight: 600;
   line-height: 1;
   margin: 25px 0 0; }
+  .post-date a,
+  .blog-description a {
+    color: #AEADAD; }
+  .post-date a:hover,
+  .blog-description a:hover {
+    color: #f03838; }
   .post-date:after,
   .blog-description:after {
     border-bottom: 1px dotted #303030;
@@ -361,6 +367,39 @@ table {
 .previous-posts-link a {
   display: block;
   padding: 8px 11px; }
+
+/* ============================================================ */
+/* Author */
+/* ============================================================ */
+.author-profile:after {
+  border-bottom: 1px dotted #303030;
+  content: "";
+  display: block;
+  margin: 40px auto 0;
+  width: 100px; }
+
+.author-meta {
+  color: #AEADAD;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 25px 0 0;
+  text-align: center;
+  text-transform: uppercase; }
+  .author-meta span {
+    display: inline-block;
+    margin: 0 10px 8px; }
+  .author-meta i {
+    margin-right: 8px; }
+  .author-meta a {
+    color: #AEADAD; }
+  .author-meta a:hover {
+    color: #f03838; }
+
+.author-bio {
+  margin: 20px auto 0;
+  text-align: center;
+  width: 700px; }
 
 /* ============================================================ */
 /* Footer */

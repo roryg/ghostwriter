@@ -274,6 +274,9 @@ table {
     line-height: 1;
     margin: 25px 0 0;
 
+    a { color: #AEADAD; }
+    a:hover { color: $primary; }
+
     &:after {
         border-bottom: 1px dotted $secondary;
         content: "";
@@ -411,6 +414,46 @@ table {
 .previous-posts-link a {
     display: block;
     padding: 8px 11px;
+}
+
+/* ============================================================ */
+/* Author */
+/* ============================================================ */
+
+.author-profile {
+    &:after {
+        border-bottom: 1px dotted $secondary;
+        content: "";
+        display: block;
+        margin: 40px auto 0;
+        width: 100px;
+    }
+}
+
+.author-meta {
+    color: #AEADAD;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 25px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        margin: 0 10px 8px;
+    }
+
+    i { margin-right: 8px; }
+
+    a { color: #AEADAD; }
+    a:hover { color: $primary; }
+}
+
+.author-bio {
+    margin: 20px auto 0;
+    text-align: center;
+    width: 700px;
 }
 
 /* ============================================================ */
