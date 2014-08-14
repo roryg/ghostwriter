@@ -421,6 +421,8 @@ table {
 /* ============================================================ */
 
 .author-profile {
+    margin: 0 40px;
+
     &:after {
         border-bottom: 1px dotted $secondary;
         content: "";
@@ -531,7 +533,8 @@ table {
     }
 
     .post-container,
-    .post-list {
+    .post-list,
+    .author-profile {
         margin-right: 25px;
         margin-left: 25px;
     }
@@ -549,11 +552,18 @@ table {
 }
 
 @media only screen and (max-width: 400px) {
-    .post-title { font-size: 32px; }
+    .post-title,
+    .author-name { font-size: 32px; }
 
     .post-container,
-    .post-list {
+    .post-list,
+    .author-profile {
         margin-right: 15px;
         margin-left: 15px;
+    }
+
+    .author-meta span {
+        display: block;
+        margin: 18px 0;
     }
 }
