@@ -380,6 +380,27 @@ table {
     margin: 40px auto 0;
     width: 100px; }
 
+.author-heading {
+  margin: 15px auto;
+  text-align: center;
+  width: 100%; }
+
+.author-avatar {
+  border-radius: 50px;
+  display: inline;
+  height: 50px;
+  margin: 5px 10px 0 0;
+  width: 50px;
+  vertical-align: middle; }
+
+.author-name {
+  display: inline;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle; }
+
 .author-meta {
   color: #AEADAD;
   font-size: 14px;
@@ -489,6 +510,10 @@ table {
   .author-profile {
     margin-right: 15px;
     margin-left: 15px; }
+
+  .author-avatar {
+    display: block;
+    margin: 0 auto 18px; }
 
   .author-meta span {
     display: block;

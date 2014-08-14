@@ -3,11 +3,13 @@
 <div class="container">
     <section class="author-profile">
         {{#author}}
-            {{#if image}}
-                <img class="author-avatar" src="{{image}}" width="80" height="80" alt="{{name}}">
-            {{/if}}
+            <div class="author-heading">
+                {{#if image}}
+                    <img class="author-avatar" src="{{image}}" width="50" height="50" alt="{{name}}">
+                {{/if}}
 
-            <h1 class="author-name page-title">{{name}}</h1>
+                <h1 class="author-name">{{name}}</h1>
+            </div>
 
             <div class="author-meta">
                 <span><i class="fa fa-bar-chart-o"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
