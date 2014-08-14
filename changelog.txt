@@ -1,4 +1,12 @@
 ------------------------------
+Ghostwriter Version 1.8.1
+------------------------------
+
+- (postblue) Fixed author bio on smaller screens
+- Improved author page display on smaller screens
+- Fixed author avatar display
+
+------------------------------
 Ghostwriter Version 1.8.0
 ------------------------------
 
