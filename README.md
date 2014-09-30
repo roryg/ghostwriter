@@ -10,7 +10,7 @@ Ghostwriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryg
 
 ### Features
 
-* Supports Ghost 0.4
+* Supports Ghost 0.5
 * Clean typography focused design.
 * Fully responsive (includes fitvid.js for responsive video embeds).
 * AJAX loading for fast, smooth transitions between posts and pages.

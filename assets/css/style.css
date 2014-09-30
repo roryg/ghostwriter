@@ -242,6 +242,12 @@ table {
   font-weight: 600;
   line-height: 1;
   margin: 25px 0 0; }
+  .post-date a,
+  .blog-description a {
+    color: #AEADAD; }
+  .post-date a:hover,
+  .blog-description a:hover {
+    color: #f03838; }
   .post-date:after,
   .blog-description:after {
     border-bottom: 1px dotted #303030;
@@ -363,6 +369,62 @@ table {
   padding: 8px 11px; }
 
 /* ============================================================ */
+/* Author */
+/* ============================================================ */
+.author-profile {
+  margin: 0 40px; }
+  .author-profile:after {
+    border-bottom: 1px dotted #303030;
+    content: "";
+    display: block;
+    margin: 40px auto 0;
+    width: 100px; }
+
+.author-heading {
+  margin: 15px auto;
+  text-align: center;
+  width: 100%; }
+
+.author-avatar {
+  border-radius: 50px;
+  display: inline;
+  height: 50px;
+  margin: 5px 10px 0 0;
+  width: 50px;
+  vertical-align: middle; }
+
+.author-name {
+  display: inline;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle; }
+
+.author-meta {
+  color: #AEADAD;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 25px 0 0;
+  text-align: center;
+  text-transform: uppercase; }
+  .author-meta span {
+    display: inline-block;
+    margin: 0 10px 8px; }
+  .author-meta i {
+    margin-right: 8px; }
+  .author-meta a {
+    color: #AEADAD; }
+  .author-meta a:hover {
+    color: #f03838; }
+
+.author-bio {
+  margin: 20px auto 0;
+  text-align: center;
+  max-width: 700px; }
+
+/* ============================================================ */
 /* Footer */
 /* ============================================================ */
 .footer {
@@ -425,7 +487,8 @@ table {
     display: block; }
 
   .post-container,
-  .post-list {
+  .post-list,
+  .author-profile {
     margin-right: 25px;
     margin-left: 25px; }
 
@@ -438,10 +501,20 @@ table {
     .share a {
       margin: 0 5px 0 0; } }
 @media only screen and (max-width: 400px) {
-  .post-title {
+  .post-title,
+  .author-name {
     font-size: 32px; }
 
   .post-container,
-  .post-list {
+  .post-list,
+  .author-profile {
     margin-right: 15px;
-    margin-left: 15px; } }
+    margin-left: 15px; }
+
+  .author-avatar {
+    display: block;
+    margin: 0 auto 18px; }
+
+  .author-meta span {
+    display: block;
+    margin: 18px 0; } }

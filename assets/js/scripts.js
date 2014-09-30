@@ -82,7 +82,7 @@ jQuery(function($) {
         });
     });
 
-    $('body').on('click', '.js-ajax-link, .pagination a, .post-tags a', function(e) {
+    $('body').on('click', '.js-ajax-link, .pagination a, .post-tags a, .post-header a', function(e) {
         e.preventDefault();
 
         if (loading === false) {
