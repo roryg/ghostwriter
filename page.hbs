@@ -10,8 +10,9 @@
             </header>
 
             <div class="post-content clearfix">
-                <img class="post-featured-image" src="{{image}}">
-
+                {{#if image}}
+                    <img class="post-featured-image" src="{{image}}">
+                {{/if}}
                 {{{content}}}
 
                 {{#if tags}}
