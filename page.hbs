@@ -9,7 +9,9 @@
                 <p class="blog-description">{{@blog.description}}</p>
             </header>
 
-            <div class="post-content">
+            <div class="post-content clearfix">
+                <img class="post-featured-image" src="{{image}}">
+
                 {{{content}}}
 
                 {{#if tags}}

@@ -544,9 +544,56 @@ table {
 }
 
 @media only screen and (max-width: 600px) {
+    h1, h2 { margin-bottom: 20px; }
+
+    p { margin-bottom: 20px; }
+
+    ul, ol { margin-bottom: 20px; }
+
+    img { margin: 30px 0; }
+
+    blockquote { margin: 30px 0;}
+
+    pre { margin: 30px 0; }
+
+    hr { margin: 35px 0; }
+
+    .site-header {
+        padding-top: 60px;
+    }
+
     .site-nav-item {
         display: block;
         margin: 15px 0;
+    }
+
+    .post-header {
+        margin-bottom: 35px;
+        padding-bottom: 45px;
+    }
+
+    .post-title,
+    .page-title,
+    .author-name,
+    .author-heading {
+        font-size: 42px;
+        margin-top: 5px;
+    }
+
+    .post-date, 
+    .blog-description,
+    .author-meta {
+        margin-top: 20px;
+
+        &:after, &:before {
+            margin-top: 30px;
+        }
+    }
+
+    .author-profile {
+        &:after, &:before {
+            margin-top: 20px;
+        }
     }
 
     .post-stub-title { display: block; }
@@ -554,6 +601,10 @@ table {
     .post-stub-date:before {
         content: "";
         display: block;
+    }
+
+    .post-list {
+        margin-top: 45px;
     }
 
     .post-container,
@@ -565,6 +616,12 @@ table {
 
     .post-tags { width: 100%; }
 
+    .post-stub a,
+    .post-stub a:hover {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
     .share {
         float: left;
         margin-top: 20px;
@@ -573,11 +630,46 @@ table {
             margin: 0 5px 0 0;
         }
     }
+
+    .footer {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
+    .site-header {
+        padding-top: 40px;
+    }
+
     .post-title,
-    .author-name { font-size: 32px; }
+    .page-title,
+    .author-name,
+    .author-heading {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .post-date, 
+    .blog-description,
+    .author-meta {
+        line-height: 1.6;
+    }
+
+    .post-date, 
+    .blog-description,
+    .author-meta {
+        margin-top: 10px;
+
+        &:after, &:before {
+            margin-top: 20px;
+        }
+    }
+
+    .author-profile {
+        &:after, &:before {
+            margin-top: 10px;
+        }
+    }
 
     .post-container,
     .post-list,
@@ -595,4 +687,6 @@ table {
         display: block;
         margin: 18px 0;
     }
+
+    .footer-copyright { padding: 0 10px; }
 }
