@@ -2,6 +2,7 @@
 
 <div class="container">
     {{#post}}
-        {{> post-content}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}   
+{{> post-content}}
     {{/post}}
 </div>
