@@ -6,6 +6,10 @@
     </header>
 
     <div class="post-content clearfix">
+        {{#if image}}
+            <img class="post-featured-image" src="{{image}}">
+        {{/if}}
+
         {{{content}}}
     </div>
 

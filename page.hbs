@@ -9,8 +9,13 @@
                 <p class="blog-description">{{@blog.description}}</p>
             </header>
 
-            <div class="post-content">
-                {{{content}}}
+            <div class="post-content clearfix">
+                {{#if image}}
+                    <img class="post-featured-image" src="{{image}}">
+                {{/if}}
+
+{{! No indention to prevent handlebars indenting <pre> tag content}}               
+{{{content}}}
 
                 {{#if tags}}
                     <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
