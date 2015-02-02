@@ -79,6 +79,10 @@ jQuery(function($) {
                 loading = false;
                 showIndex = false;
             });
+        }).fail(function() {
+            // Request fail
+            NProgress.done();
+            location.reload();
         });
     });
 
