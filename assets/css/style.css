@@ -91,6 +91,10 @@ code {
   padding: 3px;
 }
 
+pre > code {
+    background-color: transparent;
+}
+
 pre {
   font-family: 'Source Code Pro';
   font-weight: 300;
@@ -99,7 +103,8 @@ pre {
   border: 1px solid #DDDDDD;
   border-radius: 3px;
   margin: 0 0 40px;
-  padding: 15px 20px; }
+  padding: 15px 20px;
+}
 
 hr {
   border: none;
