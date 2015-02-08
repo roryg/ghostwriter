@@ -1,4 +1,12 @@
 /* ============================================================ */
+/* Fonts */
+/* ============================================================ */
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Regular.ttf'); }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Italic.ttf'); font-style:italic; }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold.ttf'); font-weight:bold; }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold-Italic.ttf'); font-weight:bold; font-style:italic; }
+
+/* ============================================================ */
 /* Base */
 /* ============================================================ */
 html, body {
@@ -7,10 +15,11 @@ html, body {
 body {
   background: #fefefe;
   color: #424242;
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 18px; }
+  font-family: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
+  font-size: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-style: italic;
   margin-bottom: 33px;
   text-transform: none; }
 
@@ -179,10 +188,10 @@ table {
 
 .site-title {
   float: left;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 200;
   margin: 0;
-  text-transform: uppercase; }
+  text-transform: none; }
   .site-title a {
     float: left;
     background: #f03838;
@@ -230,7 +239,7 @@ table {
   font-weight: 700;
   margin: 15px 0;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: none; }
 
 .page-title {
   margin: 15px 40px; }
