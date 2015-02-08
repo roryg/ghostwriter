@@ -6,6 +6,8 @@
 @font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold.ttf'); font-weight:bold; }
 @font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold-Italic.ttf'); font-weight:bold; font-style:italic; }
 
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700);
+
 /* ============================================================ */
 /* Base */
 /* ============================================================ */
@@ -83,6 +85,8 @@ img {
   max-width: 100%; }
 
 pre {
+  font-family: 'Source Code Pro';
+  font-weight: 300;
   background: #F1F0EA;
   border: 1px solid #DDDBCC;
   border-radius: 3px;
