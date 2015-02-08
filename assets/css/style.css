@@ -56,7 +56,6 @@ a {
   text-decoration: none; }
 
 ul, ol {
-  list-style-position: inside;
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
@@ -84,12 +83,20 @@ img {
   width: auto;
   max-width: 100%; }
 
+code {
+  font-family: 'Source Code Pro';
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #EFEEEE;
+  padding: 3px;
+}
+
 pre {
   font-family: 'Source Code Pro';
   font-weight: 300;
   font-size: 16px;
-  background: #F1F0EA;
-  border: 1px solid #DDDBCC;
+  background-color: #EFEEEE;
+  border: 1px solid #DDDDDD;
   border-radius: 3px;
   margin: 0 0 40px;
   padding: 15px 20px; }
@@ -143,7 +150,7 @@ table {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  max-width: 889px; }
+  max-width: 789px; }
 
 #wrapper {
   height: auto;
@@ -232,9 +239,9 @@ table {
   margin: 0 40px; }
 
 .post-header {
-  border-bottom: 6px solid #303030;
+  border-bottom: 0px solid grey;
   margin: 0 0 50px;
-  padding: 0 0 80px;
+  padding: 50px 0 50px;
   text-align: center;
   text-transform: uppercase; }
 
@@ -252,7 +259,7 @@ table {
 .post-date,
 .blog-description {
   color: #AEADAD;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1;
   margin: 25px 0 0; }
@@ -264,11 +271,16 @@ table {
     color: #f03838; }
   .post-date:after,
   .blog-description:after {
-    border-bottom: 1px dotted #303030;
     content: "";
     display: block;
-    margin: 40px auto 0;
     width: 100px; }
+
+.post-date {
+  text-transform: none;
+  font-style: italic;
+  font-weight: 100;
+}
+
 
 .post-content a:hover {
   border-bottom: 1px dotted #f03838;
