@@ -87,6 +87,7 @@ img {
 pre {
   font-family: 'Source Code Pro';
   font-weight: 300;
+  font-size: 16px;
   background: #F1F0EA;
   border: 1px solid #DDDBCC;
   border-radius: 3px;
