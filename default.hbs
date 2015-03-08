@@ -38,15 +38,7 @@
                     {{/if}}
                 </div>
 
-                <ul class="site-nav">
-                    <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Post</a></li>
-                    <li class="site-nav-item"><a class="js-ajax-link js-show-index" title="{{@blog.title}}" href="{{@blog.url}}">Browse Posts</a></li>
-                    <li class="site-nav-item"><a class="js-ajax-link" title="About | {{@blog.title}}" href="{{@blog.url}}/about">About</a></li>
-
-                    {{#if @blog.logo}}
-                        <li class="site-nav-item"><a href="{{@blog.url}}/rss">RSS</a></li>
-                    {{/if}}
-                </ul>
+                {{navigation}}
             </div>
         </header>
     

@@ -1,0 +1,12 @@
+<ul class="site-nav">
+    <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Post</a></li>
+    <li class="site-nav-item"><a class="js-ajax-link js-show-index" title="{{@blog.title}}" href="{{@blog.url}}">Browse Posts</a></li>
+
+    {{#foreach navigation}}
+        <li class="site-nav-item"><a class="js-ajax-link" title="{{label}} | {{@blog.title}}" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+
+    {{#if @blog.logo}}
+        <li class="site-nav-item"><a href="{{@blog.url}}/rss">RSS</a></li>
+    {{/if}}
+</ul>
