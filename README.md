@@ -10,7 +10,7 @@ Ghostwriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryg
 
 ### Features
 
-* Supports Ghost 0.5
+* Supports Ghost 0.5.x
 * Clean typography focused design.
 * Fully responsive (includes fitvid.js for responsive video embeds).
 * AJAX loading for fast, smooth transitions between posts and pages.
@@ -18,10 +18,6 @@ Ghostwriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryg
 * Static page support.
 * Featured post support.
 * A bunch of other bits and bobs.
-
-### Static Pages and Navigation
-
-Ghost 0.4 introduced static pages which you can use for making pages separate from your list of blog posts. There isn't however a way to output a list of static pages for navigation yet so you'll need to edit the navigation menu in the default.hbs file yourself. The HTML for the menu starts on `line 37` of the default.hbs file and contains an example `About` menu item on `line 40`.
 
 ### Troubleshooting
 
