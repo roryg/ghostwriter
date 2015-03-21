@@ -130,6 +130,7 @@ jQuery(function($) {
                     });
                 }
             }
+
         }
     });
 

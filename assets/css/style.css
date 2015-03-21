@@ -208,6 +208,7 @@ table {
   .site-nav-item a:hover {
     color: #424242; }
 
+
 /* ============================================================ */
 /* Post */
 /* ============================================================ */
@@ -218,9 +219,7 @@ table {
   margin: 0 40px; }
 
 .post-header {
-  border-bottom: 6px solid #303030;
-  margin: 0 0 50px;
-  padding: 0 0 80px;
+  padding: 0 0 40px;
   text-align: center;
   text-transform: uppercase; }
 

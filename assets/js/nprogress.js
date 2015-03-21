@@ -147,6 +147,8 @@
    */
 
   NProgress.done = function(force) {
+    Prism.highlightAll();
+    
     if (!force && !NProgress.status) return this;
 
     return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
