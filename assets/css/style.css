@@ -46,6 +46,7 @@ a {
 
 ul, ol {
   list-style-position: outside;
+  padding-left: 1rem;
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
