@@ -45,7 +45,7 @@ a {
   text-decoration: none; }
 
 ul, ol {
-  list-style-position: inside;
+  list-style-position: outside;
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
