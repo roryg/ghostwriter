@@ -3,7 +3,8 @@
 <div id="latest-post" class="container">
     {{#foreach posts}}
         {{#if @first}}
-            {{> post-content}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}   
+{{> post-content}}
         {{/if}}
     {{/foreach}}
 </div>

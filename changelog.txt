@@ -1,4 +1,22 @@
 ------------------------------
+Ghostwriter Version 1.9.1
+------------------------------
+
+- Fixed navigation bug
+
+------------------------------
+Ghostwriter Version 1.9.0
+------------------------------
+
+- Added support for Ghost 0.5.9 navigation feature
+
+------------------------------
+Ghostwriter Version 1.8.2
+------------------------------
+
+- Fixed multiline code block indention
+
+------------------------------
 Ghostwriter Version 1.8.1
 ------------------------------
 

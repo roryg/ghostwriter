@@ -13,7 +13,9 @@
                 {{#if image}}
                     <img class="post-featured-image" src="{{image}}">
                 {{/if}}
-                {{{content}}}
+
+{{! No indention to prevent handlebars indenting <pre> tag content}}               
+{{{content}}}
 
                 {{#if tags}}
                     <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
