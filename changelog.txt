@@ -1,4 +1,13 @@
 ------------------------------
+Ghostwriter Version 1.9.2
+------------------------------
+
+- Added local copy of jQuery to prepare for Ghost removing it from {{ghost_foot}}
+- (postblue) Updated normalize.css to 3.0.3
+- (postblue) Updated fontawesome to 4.3.0
+- (postblue) Fixed list issue in Gecko browsers
+
+------------------------------
 Ghostwriter Version 1.9.1
 ------------------------------
 
