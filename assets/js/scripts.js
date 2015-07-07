@@ -94,6 +94,15 @@ jQuery(function($) {
             var url = $(this).attr('href');
             var title = $(this).attr('title') || null;
 
+            //if url starts with http:// and currentState.url starts with
+            // https://, replace the protocol in url
+            if (url.indexOf("http://", 0) === 0)
+            {
+                var urlNoProt = url.replace(/.*?:\/\//g, "");
+                var curProt = currentState.url.split("/")[0];
+                url = curProt + "//" + urlNoProt;
+            }
+            
             // If the requested url is not the current states url push
             // the new state and make the ajax call.
             if (url !== currentState.url.replace(/\/$/, "")) {
