@@ -21,22 +21,30 @@ body {
   font-size: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
   font-style: italic;
   margin-bottom: 33px;
-  text-transform: none; }
+  text-transform: none;
+  background: #ffff00;
+  color: black;
+  padding: 5px 10px 6px;
+  display: inline-block;
+  margin-left: -50px;
+}
 
 h1 {
-  font-size: 26px; }
+  font-size: 36px; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 34px; }
 
 h3 {
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 20px; }
 
 h4 {
-  font-size: 18px;
+  font-size: 28px;
   margin-bottom: 18px; }
 
 h5 {
@@ -86,9 +94,9 @@ img {
 code {
   font-family: 'Source Code Pro';
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #EFEEEE;
-  padding: 3px;
+  padding: 15px;
 }
 
 pre > code {
@@ -98,12 +106,10 @@ pre > code {
 pre {
   font-family: 'Source Code Pro';
   font-weight: 300;
-  font-size: 16px;
-  background-color: #EFEEEE;
+  font-size: 14px;
   border: 1px solid #DDDDDD;
   border-radius: 3px;
   margin: 0 0 40px;
-  padding: 15px 20px;
 }
 
 hr {
@@ -181,8 +187,8 @@ table {
     background: #f03838; }
 
 .button-square {
-  background: #f03838;
-  color: #FFF;
+  background: #ffff00;
+  color: black;
   float: left;
   font-size: 17px;
   margin: 0 0 0 10px;
@@ -200,19 +206,20 @@ table {
   text-transform: uppercase; }
 
 .site-title-wrapper {
-  display: table;
+  display: inline-block;
   margin: 0 auto; }
 
 .site-title {
   float: left;
   font-size: 18px;
   font-weight: 200;
+  display: inline-block;
   margin: 0;
   text-transform: none; }
   .site-title a {
     float: left;
-    background: #f03838;
-    color: #FEFEFE;
+    background: #ffff00;
+    color: black;
     padding: 5px 10px 6px; }
     .site-title a:hover {
       background: #303030; }
@@ -223,13 +230,19 @@ table {
     margin: 0; }
 
 .site-nav {
+    display: inline-block;
   list-style: none;
-  margin: 28px 0 10px; }
+  margin: 0px 0 10px; }
 
 .site-nav-item {
+  font-family: Helvetica Neue;
+  font-weight: 400;
   display: inline-block;
+  background-color: #ffff00;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 14px;
-  font-weight: 700;
   margin: 0 10px; }
   .site-nav-item a:hover {
     color: #424242; }
@@ -245,17 +258,17 @@ table {
 
 .post-header {
   border-bottom: 0px solid grey;
-  margin: 0 0 50px;
+  margin: 0 0 10px;
   padding: 50px 0 50px;
-  text-align: center;
   text-transform: uppercase; }
 
 .post-title,
 .page-title {
   font-size: 52px;
-  font-weight: 700;
+  font-weight: 100;
+  font-style: italic;
   margin: 15px 0;
-  text-align: center;
+  margin-left: -50px;
   text-transform: none; }
 
 .page-title {
@@ -267,7 +280,9 @@ table {
   font-size: 16px;
   font-weight: 600;
   line-height: 1;
-  margin: 25px 0 0; }
+  margin: 5px 0 0;
+  margin-left: -45px;
+  }
   .post-date a,
   .blog-description a {
     color: #AEADAD; }
@@ -313,8 +328,8 @@ table {
 .share {
   float: right; }
   .share a {
-    background: #f03838;
-    color: #FFF;
+    background: #ffff00;
+    color: #303030;
     display: inline-block;
     font-size: 16px;
     margin-left: 5px;
@@ -322,7 +337,8 @@ table {
     width: 30px;
     text-align: center; }
   .share a:hover {
-    background: #303030; }
+    background: #303030;
+    color: #ffff00;}
 
 .post-navigation {
   display: table;
@@ -479,7 +495,6 @@ table {
   font-size: 14px;
   margin: 0;
   text-align: center;
-  text-transform: uppercase; }
   .footer-copyright a {
     color: #656565;
     font-weight: 700; }
