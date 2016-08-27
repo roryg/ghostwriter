@@ -38,6 +38,11 @@ jQuery(function($) {
         $postIndex.show();
     }
 
+    if (window.location.hash.indexOf('browse') === 1) {
+        $latestPost.hide();
+        $postIndex.show();
+    }
+
     // Check if history is enabled for the browser
     if ( ! History.enabled) {
         return false;
@@ -117,6 +122,7 @@ jQuery(function($) {
 
                     $latestPost.fadeOut(300, function() {
                         $postIndex.fadeIn(300);
+                        window.location.href = window.location.href + "#browse";
                         NProgress.done();
                     });
                 } else {
@@ -126,11 +132,14 @@ jQuery(function($) {
 
                     $postIndex.fadeOut(300, function() {
                         $latestPost.fadeIn(300);
+                        window.location.hash = "";
                         NProgress.done();
                     });
                 }
             }
         }
     });
+
+    $('p img + em').css('top', function(val) { return (-$(this).parent().height())/2.0; });
 
 });

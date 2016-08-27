@@ -1,10 +1,25 @@
 // ============================================================ //
-// Colours //
+// Webfonts //
+// ============================================================ //
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Regular.ttf'); }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Italic.ttf'); font-style:italic; }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold.ttf'); font-weight:bold; }
+@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold-Italic.ttf'); font-weight:bold; font-style:italic; }
+
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:100,300,400,700);
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400';
+
+// ============================================================ //
+// Colours and Fonts //
 // ============================================================ //
 
 $primary: #F03838;
 $secondary: #303030;
 $background: #FEFEFE;
+$highlight: #FFFF00;
+
+$defaultTextFont: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
+$defaultHeaderFont: "Roboto Slab", serif;
 
 /* ============================================================ */
 /* Base */
@@ -14,20 +29,30 @@ html, body { height: 100%; }
 
 body {
     background: $background;
+//    background-image: url(header.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
     color: #424242;
-    font-family: "Open Sans", arial, sans-serif;
+    font-family: $defaultTextFont;
     font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    font-family: $defaultHeaderFont, serif;
+    font-style: italic;
+    margin-left: -10px;
     margin-bottom: 33px;
+    padding: 5px 10px 5px 10px;
     text-transform: none;
+    background-color: $highlight;
+    display: inline-block;
 }
 
-h1 { font-size: 26px; }
-h2 { font-size: 24px; }
-h3 { font-size: 20px; margin-bottom: 20px; }
-h4 { font-size: 18px; margin-bottom: 18px; }
+h1 { font-size: 36px; }
+h2 { font-size: 32px; }
+h3 { font-size: 30px; margin-bottom: 20px; }
+h4 { font-size: 28px; margin-bottom: 18px; }
 h5 { font-size: 16px; margin-bottom: 15px; }
 h6 { font-size: 14px; margin-bottom: 12px; }
 
@@ -42,7 +67,8 @@ a {
 }
 
 ul, ol {
-    list-style-position: inside;
+    list-style-position: outside;
+    list-style-type: square;
     line-height: 1.8;
     margin: 0 0 40px;
     padding: 0;
@@ -54,6 +80,7 @@ ul, ol {
 
         &:last-of-type { margin-bottom: 0; }
     }
+
 }
 
 blockquote {
@@ -78,12 +105,16 @@ img {
 }
 
 pre {
-    background: #F1F0EA;
+    font-family: "Source Code Pro", "Courier New", courier, fixed;
+    font-weight: 100;
+    font-size: 14px;
+    background: #2B2B2B;
     border: 1px solid #DDDBCC;
     border-radius: 3px;
     margin: 0 0 40px;
     padding: 15px 20px;
 }
+
 
 hr {
     border: none;
@@ -146,7 +177,7 @@ table {
     margin: 0 auto;
     position: relative;
     width: 100%;
-    max-width: 889px;
+    max-width: 789px;
 }
 
 #wrapper {
@@ -177,14 +208,14 @@ table {
 }
 
 .button-square {
-    background: $primary;
-    color: #FFF;
+    background: $highlight;
+    color: #424242;
     float: left;
-    font-size: 17px;
+    font-size: 18px;
     margin: 0 0 0 10px;
-    padding: 3px 8px 4px;
+    padding: 6px 12px 8px;
 
-    &:hover { background: $secondary; }
+    &:hover { background: $secondary; color: white; }
 }
 
 /* ============================================================ */
@@ -200,23 +231,24 @@ table {
 
 .site-title-wrapper {
     display: table;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: -10px;
 }
 
 .site-title {
     float: left;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 100;
+    color: #424242;
     margin: 0;
-    text-transform: uppercase;
 
     a {
         float: left;
-        background: $primary;
-        color: #FEFEFE;
+        background: $highlight;
+        color: #424242;
         padding: 5px 10px 6px;
 
-        &:hover { background: $secondary; }
+        &:hover { background: $secondary; color: white; }
     }
 }
 .site-logo {
@@ -226,13 +258,15 @@ table {
 }
 
 .site-nav {
+    display: inline-block;
+    float: right;
     list-style: none;
-    margin: 28px 0 10px;
+    margin: 0px 0 10px;
 }
 
 .site-nav-item {
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     margin: 0 10px;
 
@@ -248,20 +282,23 @@ table {
 .post-container { margin: 0 40px; }
 
 .post-header {
-    border-bottom: 6px solid $secondary;
-    margin: 0 0 50px;
-    padding: 0 0 80px;
-    text-align: center;
-    text-transform: uppercase;
+    margin: 50px 0 10px -50px;
+    padding: 0 0 30px;
+    text-align: left;
 }
 
 .post-title,
 .page-title {
+//    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-family: $defaultHeaderFont;
     font-size: 52px;
-    font-weight: 700;
+    font-weight: 300;
+    font-style: italic;
     margin: 15px 0;
-    text-align: center;
+    padding: 5px 15px 5px 15px;
+    text-align: left;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .page-title { margin: 15px 40px; }
@@ -270,19 +307,18 @@ table {
 .blog-description {
     color: #AEADAD;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1;
-    margin: 25px 0 0;
+    margin: 5px 0 0;
 
     a { color: #AEADAD; }
     a:hover { color: $primary; }
 
     &:after {
-        border-bottom: 1px dotted $secondary;
         content: "";
         display: block;
         margin: 40px auto 0;
-        width: 100px;
+        width: 50px;
     }
 }
 
@@ -293,6 +329,21 @@ table {
     }
 
     &:last-child { margin-bottom: 0; }
+/*
+    ul {
+        padding-left: 10px;
+    }
+
+    ul li {
+        list-style-type: none;
+        text-indent: -10px;
+        padding-left: 20px;
+    }
+
+    li:before {
+        content: "\0BB \020";
+    }
+    */
 }
 
 .post-footer { margin-top: 5px; }
@@ -315,8 +366,8 @@ table {
     float: right;
 
     a {
-        background: $primary;
-        color: #FFF;
+        background: $highlight;
+        color: #424242;
         display: inline-block;
         font-size: 16px;
         margin-left: 5px;
@@ -325,7 +376,7 @@ table {
         text-align: center;
     }
 
-    a:hover { background: $secondary; }
+    a:hover { background: $secondary; color: white; }
 }
 
 .post-navigation {
@@ -352,11 +403,38 @@ table {
 .page-number { display: none; }
 
 /* ============================================================ */
+/* Image Captions */
+/* ============================================================ */
+
+p img + em {
+    font-family: $defaultTextFont;
+    font-size: 0.9em;
+    line-height: 1.4;
+    font-style: normal;
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    left: -220px;
+    top: -100px;
+    width: 25%;
+    color: gray;
+}
+
+p > img {
+    display: block;
+    margin: 0 auto !important;
+    width: auto;
+    overflow: visible;
+    max-width: 120%;
+}
+
+
+
+/* ============================================================ */
 /* Post Index */
 /* ============================================================ */
 
 .post-list {
-    border-top: 6px solid $secondary;
     list-style: none;
     margin: 80px 40px 0;
     padding: 35px 0 0;
@@ -498,6 +576,7 @@ table {
     .site-title a:hover,
     .button-square:hover {
         background: #121212;
+        color: white;
     }
 
     .button-jump-top {
@@ -512,7 +591,6 @@ table {
     font-size: 14px;
     margin: 0;
     text-align: center;
-    text-transform: uppercase;
 
     a {
         color: #656565;

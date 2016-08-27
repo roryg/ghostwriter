@@ -1,13 +1,21 @@
-/* ============================================================ */
-/* Fonts */
-/* ============================================================ */
-@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Regular.ttf'); }
-@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Italic.ttf'); font-style:italic; }
-@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold.ttf'); font-weight:bold; }
-@font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold-Italic.ttf'); font-weight:bold; font-style:italic; }
-
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700);
-
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:100,300,400,700);
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:300,400";
+@font-face {
+  font-family: garamond8;
+  src: url("../fonts/GaramondNo8-Regular.ttf"); }
+@font-face {
+  font-family: garamond8;
+  src: url("../fonts/GaramondNo8-Italic.ttf");
+  font-style: italic; }
+@font-face {
+  font-family: garamond8;
+  src: url("../fonts/GaramondNo8-Bold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: garamond8;
+  src: url("../fonts/GaramondNo8-Bold-Italic.ttf");
+  font-weight: bold;
+  font-style: italic; }
 /* ============================================================ */
 /* Base */
 /* ============================================================ */
@@ -15,29 +23,29 @@ html, body {
   height: 100%; }
 
 body {
-  background: #fefefe;
+  background: #FEFEFE;
+  background-repeat: no-repeat;
+  background-position: top right;
   color: #424242;
   font-family: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
-  font-size: 20px; }
+  font-size: 18px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
+  font-family: "Roboto Slab", serif, serif;
   font-style: italic;
+  margin-left: -10px;
   margin-bottom: 33px;
+  padding: 5px 10px 5px 10px;
   text-transform: none;
-  background: #ffff00;
-  color: black;
-  padding: 5px 10px 6px;
-  display: inline-block;
-  margin-left: -50px;
-}
+  background-color: #FFFF00;
+  display: inline-block; }
 
 h1 {
   font-size: 36px; }
 
 h2 {
-  font-size: 34px; }
+  font-size: 32px; }
 
 h3 {
   font-size: 30px;
@@ -60,10 +68,12 @@ p {
   margin: 0 0 30px; }
 
 a {
-  color: #f03838;
+  color: #F03838;
   text-decoration: none; }
 
 ul, ol {
+  list-style-position: outside;
+  list-style-type: square;
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
@@ -91,26 +101,15 @@ img {
   width: auto;
   max-width: 100%; }
 
-code {
-  font-family: 'Source Code Pro';
-  font-weight: 300;
-  font-size: 14px;
-  background-color: #EFEEEE;
-  padding: 15px;
-}
-
-pre > code {
-    background-color: transparent;
-}
-
 pre {
-  font-family: 'Source Code Pro';
-  font-weight: 300;
+  font-family: "Source Code Pro", "Courier New", courier, fixed;
+  font-weight: 100;
   font-size: 14px;
-  border: 1px solid #DDDDDD;
+  background: #2B2B2B;
+  border: 1px solid #DDDBCC;
   border-radius: 3px;
   margin: 0 0 40px;
-}
+  padding: 15px 20px; }
 
 hr {
   border: none;
@@ -184,17 +183,18 @@ table {
   padding: 10px 12px;
   text-transform: uppercase; }
   .button:hover {
-    background: #f03838; }
+    background: #F03838; }
 
 .button-square {
-  background: #ffff00;
-  color: black;
+  background: #FFFF00;
+  color: #424242;
   float: left;
-  font-size: 17px;
+  font-size: 18px;
   margin: 0 0 0 10px;
-  padding: 3px 8px 4px; }
+  padding: 6px 12px 8px; }
   .button-square:hover {
-    background: #303030; }
+    background: #303030;
+    color: white; }
 
 /* ============================================================ */
 /* Site Header */
@@ -206,23 +206,24 @@ table {
   text-transform: uppercase; }
 
 .site-title-wrapper {
-  display: inline-block;
-  margin: 0 auto; }
+  display: table;
+  width: 100%;
+  margin-left: -10px; }
 
 .site-title {
   float: left;
   font-size: 18px;
-  font-weight: 200;
-  display: inline-block;
-  margin: 0;
-  text-transform: none; }
+  font-weight: 100;
+  color: #424242;
+  margin: 0; }
   .site-title a {
     float: left;
-    background: #ffff00;
-    color: black;
+    background: #FFFF00;
+    color: #424242;
     padding: 5px 10px 6px; }
     .site-title a:hover {
-      background: #303030; }
+      background: #303030;
+      color: white; }
 
 .site-logo {
   display: block; }
@@ -230,19 +231,15 @@ table {
     margin: 0; }
 
 .site-nav {
-    display: inline-block;
+  display: inline-block;
+  float: right;
   list-style: none;
   margin: 0px 0 10px; }
 
 .site-nav-item {
-  font-family: Helvetica Neue;
-  font-weight: 400;
   display: inline-block;
-  background-color: #ffff00;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   margin: 0 10px; }
   .site-nav-item a:hover {
     color: #424242; }
@@ -257,19 +254,21 @@ table {
   margin: 0 40px; }
 
 .post-header {
-  border-bottom: 0px solid grey;
-  margin: 0 0 10px;
-  padding: 50px 0 50px;
-  text-transform: uppercase; }
+  margin: 50px 0 10px -50px;
+  padding: 0 0 30px;
+  text-align: left; }
 
 .post-title,
 .page-title {
+  font-family: "Roboto Slab", serif;
   font-size: 52px;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
   margin: 15px 0;
-  margin-left: -50px;
-  text-transform: none; }
+  padding: 5px 15px 5px 15px;
+  text-align: left;
+  text-transform: uppercase;
+  display: inline-block; }
 
 .page-title {
   margin: 15px 40px; }
@@ -277,36 +276,44 @@ table {
 .post-date,
 .blog-description {
   color: #AEADAD;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1;
-  margin: 5px 0 0;
-  margin-left: -45px;
-  }
+  margin: 5px 0 0; }
   .post-date a,
   .blog-description a {
     color: #AEADAD; }
   .post-date a:hover,
   .blog-description a:hover {
-    color: #f03838; }
+    color: #F03838; }
   .post-date:after,
   .blog-description:after {
     content: "";
     display: block;
-    width: 100px; }
+    margin: 40px auto 0;
+    width: 50px; }
 
-.post-date {
-  text-transform: none;
-  font-style: italic;
-  font-weight: 100;
-}
-
-
-.post-content a:hover {
-  border-bottom: 1px dotted #f03838;
-  padding: 0 0 2px; }
-.post-content:last-child {
-  margin-bottom: 0; }
+.post-content {
+  /*
+      ul {
+          padding-left: 10px;
+      }
+  
+      ul li {
+          list-style-type: none;
+          text-indent: -10px;
+          padding-left: 20px;
+      }
+  
+      li:before {
+          content: "\0BB \020";
+      }
+      */ }
+  .post-content a:hover {
+    border-bottom: 1px dotted #F03838;
+    padding: 0 0 2px; }
+  .post-content:last-child {
+    margin-bottom: 0; }
 
 .post-footer {
   margin-top: 5px; }
@@ -328,8 +335,8 @@ table {
 .share {
   float: right; }
   .share a {
-    background: #ffff00;
-    color: #303030;
+    background: #FFFF00;
+    color: #424242;
     display: inline-block;
     font-size: 16px;
     margin-left: 5px;
@@ -338,7 +345,7 @@ table {
     text-align: center; }
   .share a:hover {
     background: #303030;
-    color: #ffff00;}
+    color: white; }
 
 .post-navigation {
   display: table;
@@ -347,7 +354,7 @@ table {
 .newer-posts,
 .older-posts {
   float: left;
-  background: #f03838;
+  background: #F03838;
   color: #FEFEFE;
   font-size: 14px;
   font-weight: 600;
@@ -362,10 +369,32 @@ table {
   display: none; }
 
 /* ============================================================ */
+/* Image Captions */
+/* ============================================================ */
+p img + em {
+  font-family: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
+  font-size: 0.9em;
+  line-height: 1.4;
+  font-style: normal;
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  left: -220px;
+  top: -100px;
+  width: 25%;
+  color: gray; }
+
+p > img {
+  display: block;
+  margin: 0 auto !important;
+  width: auto;
+  overflow: visible;
+  max-width: 120%; }
+
+/* ============================================================ */
 /* Post Index */
 /* ============================================================ */
 .post-list {
-  border-top: 6px solid #303030;
   list-style: none;
   margin: 80px 40px 0;
   padding: 35px 0 0; }
@@ -385,10 +414,10 @@ table {
     padding: 20px 5px; }
     .post-stub a:hover {
       background: #FCF5F5;
-      color: #f03838;
+      color: #F03838;
       padding: 20px 12px; }
       .post-stub a:hover .post-stub-tag {
-        background: #f03838; }
+        background: #F03838; }
 
 .post-stub-tag {
   background: #303030;
@@ -464,7 +493,7 @@ table {
   .author-meta a {
     color: #AEADAD; }
   .author-meta a:hover {
-    color: #f03838; }
+    color: #F03838; }
 
 .author-bio {
   margin: 20px auto 0;
@@ -484,7 +513,8 @@ table {
     margin: 80px auto 35px; }
   .footer .site-title a:hover,
   .footer .button-square:hover {
-    background: #121212; }
+    background: #121212;
+    color: white; }
   .footer .button-jump-top {
     font-size: 23px;
     line-height: 1.1;
@@ -494,7 +524,7 @@ table {
   color: #656565;
   font-size: 14px;
   margin: 0;
-  text-align: center;
+  text-align: center; }
   .footer-copyright a {
     color: #656565;
     font-weight: 700; }
@@ -505,14 +535,14 @@ table {
 /* NProgress */
 /* ============================================================ */
 #nprogress .bar {
-  background: #f03838; }
+  background: #F03838; }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #f03838, 0 0 5px #f03838; }
+  box-shadow: 0 0 10px #F03838, 0 0 5px #F03838; }
 
 #nprogress .spinner-icon {
-  border-top-color: #f03838;
-  border-left-color: #f03838; }
+  border-top-color: #F03838;
+  border-left-color: #F03838; }
 
 /* ============================================================ */
 /* Media Queries */
@@ -652,3 +682,5 @@ table {
 
   .footer-copyright {
     padding: 0 10px; } }
+
+/*# sourceMappingURL=style.css.map */
