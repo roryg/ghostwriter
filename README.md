@@ -1,24 +1,22 @@
-# Ghostwriter serif
+# robowriter
 
-Ghostwriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryghost/ghost/) blogging platform released under the MIT License.
+robowriter is a simple AJAX driven theme for the [Ghost](http://github.com/tryghost/ghost/) blogging platform released under the MIT License. robowriter is based on Rory Gibsons [Ghostwriter theme](http://github.com/roryg/ghostwriter) — see more of his works at [jollygoodthemes.com](http://jollygoodthemes.com).
 
-**[View a demo of Ghostwriter serif](https://ulrik.is/writing)**
+**[View a demo of robowriter](https://ulrik.is/writing)**
 
-**[Download Ghostwriter serif](https://github.com/skalarproduktraum/ghostwriter/archive/master.zip)**
-
-**The original _Ghostwriter_ theme was developed by Rory Gibson, see his themes at [jollygoodthemes.com](http://jollygoodthemes.com)**
+**[Download robowriter](https://github.com/skalarproduktraum/robowriter/archive/master.zip)**
 
 ### Features
 
-* Supports Ghost 0.5
-* Clean typography focused design, here featuring URW Garamond
+* Supports Ghost 0.9.
+* Clean typography focused design, featuring Roboto Slab and URW Garamond.
 * Fully responsive (includes fitvid.js for responsive video embeds).
 * AJAX loading for fast, smooth transitions between posts and pages.
-* SASS files included.
+* SASS files included — see `assets/sass/style.scss`.
 * Static page support.
 * Featured post support.
-* Includes LaTeX support via [MathJax](http://mathjax.org)
-* A bunch of other bits and bobs.
+* Optional LaTeX support via [MathJax](http://mathjax.org)
+* Optional highlighting support via [Prism](http://prismjs.com) or [highlight.js](https://highlightjs.org).
 
 ### Static Pages and Navigation
 
@@ -26,9 +24,9 @@ Ghost 0.4 introduced static pages which you can use for making pages separate fr
 
 ### Fonts
 
-Ghostwriter serif uses [URW Garamond](http://garamond.org/urw) as main font. The TrueType font files are included in this repository and are licensed under the [Aladdin Free Public License](http://web.archive.org/web/20021010015844/http://www.artifex.com/downloads/doc/Public.htm).
+robowriter uses [URW Garamond](http://garamond.org/urw) as main font. The TrueType font files are included in this repository and are licensed under the [Aladdin Free Public License](http://web.archive.org/web/20021010015844/http://www.artifex.com/downloads/doc/Public.htm).
 
-Ghostwriter serif uses the free [Adobe Source Code Pro](https://github.com/adobe-fonts/source-code-pro) fonts for display of inline and performed code. The font is included from Google Fonts.
+robowriter uses the free [Adobe Source Code Pro](https://github.com/adobe-fonts/source-code-pro) fonts for display of inline and performed code. The font is included from Google Fonts.
 
 ### Troubleshooting
 
