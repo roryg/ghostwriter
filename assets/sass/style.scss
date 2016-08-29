@@ -6,6 +6,10 @@
 @font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold.ttf'); font-weight:bold; }
 @font-face { font-family:garamond8; src:url('../fonts/GaramondNo8-Bold-Italic.ttf'); font-weight:bold; font-style:italic; }
 
+@font-face { font-family:icons; src:url('../fonts/icons.ttf'); }
+@font-face { font-family:icons; src:url('../fonts/icons.woff'); }
+@font-face { font-family:icons; src:url('../fonts/icons.eot'); }
+
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:100,300,400,700);
 @import 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400';
 
@@ -17,6 +21,7 @@ $primary: #F03838;
 $secondary: #303030;
 $background: #FEFEFE;
 $highlight: #FFFF00;
+$lightbg: #F5F5F5;
 
 $defaultTextFont: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
 $defaultHeaderFont: "Roboto Slab", serif;
@@ -29,27 +34,24 @@ html, body { height: 100%; }
 
 body {
     background: $background;
-//    background-image: url(header.jpg);
     background-repeat: no-repeat;
     background-position: top right;
     color: #424242;
     font-family: $defaultTextFont;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     font-family: $defaultHeaderFont, serif;
-    font-style: italic;
-    margin-left: -10px;
     margin-bottom: 33px;
+    margin-left: -10px;
     padding: 5px 10px 5px 10px;
     text-transform: none;
-    background-color: $highlight;
     display: inline-block;
 }
 
-h1 { font-size: 36px; }
+h1 { font-size: 44px; }
 h2 { font-size: 32px; }
 h3 { font-size: 30px; margin-bottom: 20px; }
 h4 { font-size: 28px; margin-bottom: 18px; }
@@ -68,7 +70,6 @@ a {
 
 ul, ol {
     list-style-position: outside;
-    list-style-type: square;
     line-height: 1.8;
     margin: 0 0 40px;
     padding: 0;
@@ -80,7 +81,10 @@ ul, ol {
 
         &:last-of-type { margin-bottom: 0; }
     }
+}
 
+ul {
+    list-style-type: circle;
 }
 
 blockquote {
@@ -107,12 +111,20 @@ img {
 pre {
     font-family: "Source Code Pro", "Courier New", courier, fixed;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 12px;
     background: #2B2B2B;
     border: 1px solid #DDDBCC;
     border-radius: 3px;
     margin: 0 0 40px;
     padding: 15px 20px;
+}
+
+code {
+    font-family: "Source Code Pro", "Courier New", courier, fixed;
+    font-weight: 100;
+    font-size: 16px;
+    background-color: $lightbg;
+    padding: 4px;
 }
 
 
@@ -211,7 +223,7 @@ table {
     background: $highlight;
     color: #424242;
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     margin: 0 0 0 10px;
     padding: 6px 12px 8px;
 
@@ -223,16 +235,17 @@ table {
 /* ============================================================ */
 
 .site-header {
-    padding: 100px 0 0;
+    padding: 100px 0 30px;
     overflow: auto;
     text-align: center;
-    text-transform: uppercase;
+//    text-transform: uppercase;
+//    background-color: $lightbg;
+//    background-image: url(../images/worn_dots.png);
 }
 
 .site-title-wrapper {
     display: table;
     width: 100%;
-    margin-left: -10px;
 }
 
 .site-title {
@@ -241,6 +254,7 @@ table {
     font-weight: 100;
     color: #424242;
     margin: 0;
+    margin-left: -15px;
 
     a {
         float: left;
@@ -270,7 +284,20 @@ table {
     font-weight: 700;
     margin: 0 10px;
 
-    a:hover { color: #424242; }
+    a {
+        padding: 4px;
+    }
+
+    a:hover { 
+        background: $secondary; color: white;
+    }
+
+    a { 
+        color: black;
+        font-family: $defaultHeaderFont;
+        font-weight: 100;
+        text-transform: normal;
+    }
 }
 
 /* ============================================================ */
@@ -279,26 +306,25 @@ table {
 
 #latest-post { display: none; }
 
-.post-container { margin: 0 40px; }
+.post-container { margin: 0; }
 
 .post-header {
-    margin: 50px 0 10px -50px;
+    margin: 50px 0 10px 0px;
     padding: 0 0 30px;
     text-align: left;
 }
 
 .post-title,
 .page-title {
-//    font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-family: $defaultHeaderFont;
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 300;
-    font-style: italic;
-    margin: 15px 0;
-    padding: 5px 15px 5px 15px;
+    margin: 15px 0 50px 0px;
+    margin-left: -5px;
+    padding: 5px 15px 45px 15px;
     text-align: left;
-    text-transform: uppercase;
     display: inline-block;
+    border-bottom: 20px solid $highlight;
 }
 
 .page-title { margin: 15px 40px; }
@@ -306,10 +332,13 @@ table {
 .post-date,
 .blog-description {
     color: #AEADAD;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: $defaultHeaderFont;
+    font-weight: 100;
+    font-size: 16px;
+    font-style: italic;
     line-height: 1;
     margin: 5px 0 0;
+    text-align: center;
 
     a { color: #AEADAD; }
     a:hover { color: $primary; }
@@ -317,9 +346,15 @@ table {
     &:after {
         content: "";
         display: block;
-        margin: 40px auto 0;
+        margin: 5px auto 0;
         width: 50px;
     }
+}
+
+.post-date {
+    float: left;
+    text-align: left;
+    font-style: normal;
 }
 
 .post-content {
@@ -351,14 +386,11 @@ table {
 .post-tags,
 .share {
     color: #AEADAD;
-    font-size: 14px;
-
-    span { font-weight: 600; }
 }
 
 .post-tags {
-    float: left;
     margin: 3px 0 0;
+    a { font-weight: bold; }
     a:hover { color: $secondary; }
 }
 
@@ -565,7 +597,7 @@ p > img {
 /* ============================================================ */
 
 .footer {
-    background: $secondary;
+    background: $lightbg;
     color: #D3D3D3;
     height: 265px;
     margin-top: 95px;
@@ -584,6 +616,15 @@ p > img {
         line-height: 1.1;
         padding-top: 1px;
     }
+
+    .icon-ghost {
+        font-family: 'icons', Fira Sans, "Open Sans";
+        speak: none;
+    }
+
+    .icon-ghost:before {
+        content: "\f600";
+    }
 }
 
 .footer-copyright {
@@ -595,8 +636,9 @@ p > img {
     a {
         color: #656565;
         font-weight: 700;
+        padding: 3px;
 
-        &:hover { color: #FEFEFE; }
+        &:hover { color: #FEFEFE; background-color: black; }
     }
 }
 

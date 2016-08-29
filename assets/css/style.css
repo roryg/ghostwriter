@@ -16,6 +16,15 @@
   src: url("../fonts/GaramondNo8-Bold-Italic.ttf");
   font-weight: bold;
   font-style: italic; }
+@font-face {
+  font-family: icons;
+  src: url("../fonts/icons.ttf"); }
+@font-face {
+  font-family: icons;
+  src: url("../fonts/icons.woff"); }
+@font-face {
+  font-family: icons;
+  src: url("../fonts/icons.eot"); }
 /* ============================================================ */
 /* Base */
 /* ============================================================ */
@@ -28,21 +37,19 @@ body {
   background-position: top right;
   color: #424242;
   font-family: garamond8, Garamond, "Adobe Garamond Pro", "Adobe Garamond", Times, serif;
-  font-size: 18px; }
+  font-size: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   font-family: "Roboto Slab", serif, serif;
-  font-style: italic;
-  margin-left: -10px;
   margin-bottom: 33px;
+  margin-left: -10px;
   padding: 5px 10px 5px 10px;
   text-transform: none;
-  background-color: #FFFF00;
   display: inline-block; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 44px; }
 
 h2 {
   font-size: 32px; }
@@ -73,7 +80,6 @@ a {
 
 ul, ol {
   list-style-position: outside;
-  list-style-type: square;
   line-height: 1.8;
   margin: 0 0 40px;
   padding: 0; }
@@ -83,6 +89,9 @@ ul, ol {
     margin: 0 0 10px; }
     ul li:last-of-type, ol li:last-of-type {
       margin-bottom: 0; }
+
+ul {
+  list-style-type: circle; }
 
 blockquote {
   border-left: 1px dotted #303030;
@@ -104,12 +113,19 @@ img {
 pre {
   font-family: "Source Code Pro", "Courier New", courier, fixed;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 12px;
   background: #2B2B2B;
   border: 1px solid #DDDBCC;
   border-radius: 3px;
   margin: 0 0 40px;
   padding: 15px 20px; }
+
+code {
+  font-family: "Source Code Pro", "Courier New", courier, fixed;
+  font-weight: 100;
+  font-size: 16px;
+  background-color: #F5F5F5;
+  padding: 4px; }
 
 hr {
   border: none;
@@ -189,7 +205,7 @@ table {
   background: #FFFF00;
   color: #424242;
   float: left;
-  font-size: 18px;
+  font-size: 14px;
   margin: 0 0 0 10px;
   padding: 6px 12px 8px; }
   .button-square:hover {
@@ -200,22 +216,21 @@ table {
 /* Site Header */
 /* ============================================================ */
 .site-header {
-  padding: 100px 0 0;
+  padding: 100px 0 30px;
   overflow: auto;
-  text-align: center;
-  text-transform: uppercase; }
+  text-align: center; }
 
 .site-title-wrapper {
   display: table;
-  width: 100%;
-  margin-left: -10px; }
+  width: 100%; }
 
 .site-title {
   float: left;
   font-size: 18px;
   font-weight: 100;
   color: #424242;
-  margin: 0; }
+  margin: 0;
+  margin-left: -15px; }
   .site-title a {
     float: left;
     background: #FFFF00;
@@ -241,8 +256,16 @@ table {
   font-size: 16px;
   font-weight: 700;
   margin: 0 10px; }
+  .site-nav-item a {
+    padding: 4px; }
   .site-nav-item a:hover {
-    color: #424242; }
+    background: #303030;
+    color: white; }
+  .site-nav-item a {
+    color: black;
+    font-family: "Roboto Slab", serif;
+    font-weight: 100;
+    text-transform: normal; }
 
 /* ============================================================ */
 /* Post */
@@ -251,24 +274,24 @@ table {
   display: none; }
 
 .post-container {
-  margin: 0 40px; }
+  margin: 0; }
 
 .post-header {
-  margin: 50px 0 10px -50px;
+  margin: 50px 0 10px 0px;
   padding: 0 0 30px;
   text-align: left; }
 
 .post-title,
 .page-title {
   font-family: "Roboto Slab", serif;
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 300;
-  font-style: italic;
-  margin: 15px 0;
-  padding: 5px 15px 5px 15px;
+  margin: 15px 0 50px 0px;
+  margin-left: -5px;
+  padding: 5px 15px 45px 15px;
   text-align: left;
-  text-transform: uppercase;
-  display: inline-block; }
+  display: inline-block;
+  border-bottom: 20px solid #FFFF00; }
 
 .page-title {
   margin: 15px 40px; }
@@ -276,10 +299,13 @@ table {
 .post-date,
 .blog-description {
   color: #AEADAD;
-  font-size: 14px;
-  font-weight: 400;
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
+  font-size: 16px;
+  font-style: italic;
   line-height: 1;
-  margin: 5px 0 0; }
+  margin: 5px 0 0;
+  text-align: center; }
   .post-date a,
   .blog-description a {
     color: #AEADAD; }
@@ -290,8 +316,13 @@ table {
   .blog-description:after {
     content: "";
     display: block;
-    margin: 40px auto 0;
+    margin: 5px auto 0;
     width: 50px; }
+
+.post-date {
+  float: left;
+  text-align: left;
+  font-style: normal; }
 
 .post-content {
   /*
@@ -320,15 +351,12 @@ table {
 
 .post-tags,
 .share {
-  color: #AEADAD;
-  font-size: 14px; }
-  .post-tags span,
-  .share span {
-    font-weight: 600; }
+  color: #AEADAD; }
 
 .post-tags {
-  float: left;
   margin: 3px 0 0; }
+  .post-tags a {
+    font-weight: bold; }
   .post-tags a:hover {
     color: #303030; }
 
@@ -504,7 +532,7 @@ p > img {
 /* Footer */
 /* ============================================================ */
 .footer {
-  background: #303030;
+  background: #F5F5F5;
   color: #D3D3D3;
   height: 265px;
   margin-top: 95px;
@@ -519,6 +547,11 @@ p > img {
     font-size: 23px;
     line-height: 1.1;
     padding-top: 1px; }
+  .footer .icon-ghost {
+    font-family: 'icons', Fira Sans, "Open Sans";
+    speak: none; }
+  .footer .icon-ghost:before {
+    content: "\f600"; }
 
 .footer-copyright {
   color: #656565;
@@ -527,9 +560,11 @@ p > img {
   text-align: center; }
   .footer-copyright a {
     color: #656565;
-    font-weight: 700; }
+    font-weight: 700;
+    padding: 3px; }
     .footer-copyright a:hover {
-      color: #FEFEFE; }
+      color: #FEFEFE;
+      background-color: black; }
 
 /* ============================================================ */
 /* NProgress */

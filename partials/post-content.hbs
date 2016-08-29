@@ -2,7 +2,6 @@
     <header class="post-header">
         <h1 class="post-title">{{title}}</h1>
 
-        <p class="post-date">Published <time datetime="{{published_at}}">{{date format="MMMM Do YYYY"}}</time> <strong>by {{author}}</strong></p>
     </header>
 
     <div class="post-content clearfix">
@@ -14,9 +13,11 @@
     </div>
 
     <footer class="post-footer clearfix">
+        <p class="post-date">Published <time datetime="{{published_at}}">{{date format="MMMM Do YYYY"}}</time> by <strong>{{author}}</strong>
         {{#if tags}}
-            <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
+            <span class="post-tags"><span>and tagged with</span> {{tags}}.</span>
         {{/if}}
+        </p>
 
         <div class="share">
             <a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"

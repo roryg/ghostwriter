@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/nprogress.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -32,8 +32,6 @@
                         <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
                     {{else}}
                         <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-
-                        <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
                     {{/if}}
 
                 <ul class="site-nav">
@@ -63,7 +61,7 @@
                 <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
             </div>
 
-            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/skalarproduktraum/ghostwriterserif">GhostwriterSerif</a> based on the great <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> by <a href="http://jollygoodthemes.com">JollyGoodThemes</a></p>
+            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Proudly published with <a class="icon-ghost" href="https://ghost.org"><span class="hidden">Ghost</span></a> / <a href="https://github.com/skalarproduktraum/robowriter">robowriter</a> theme based on the great <a href="https://github.com/roryg/ghostwriter">Ghostwriter</a> by <a href="http://jollygoodthemes.com">JollyGoodThemes</a></p>.
         </div>
     </footer>
 
@@ -74,14 +72,6 @@
     <script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('pre code').each(function(i, block) {
-                hljs.highlightBlock(block);
-            });
-        });
-    </script>
 
 </body>
 </html>
