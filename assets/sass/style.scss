@@ -127,6 +127,11 @@ code {
     padding: 4px;
 }
 
+pre code {
+    background-color: inherit;
+    color: white;
+}
+
 
 hr {
     border: none;

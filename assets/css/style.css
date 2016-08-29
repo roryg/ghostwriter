@@ -127,6 +127,10 @@ code {
   background-color: #F5F5F5;
   padding: 4px; }
 
+pre code {
+  background-color: inherit;
+  color: white; }
+
 hr {
   border: none;
   border-bottom: 1px dotted #303030;
