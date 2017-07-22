@@ -1,4 +1,10 @@
 {
-	"name": "Ghostwriter",
-	"version": "1.9.3"
+	"name": "ghostwriter",
+	"version": "1.9.3",
+    "author": {
+        "email": "rg.rorygibson+ghost@gmail.com"
+    },
+    "config": {
+        "posts_per_page": 5
+    }
 }
