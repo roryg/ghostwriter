@@ -12,7 +12,7 @@
             </div>
 
             <div class="author-meta">
-                <span><i class="fa fa-bar-chart-o"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+                <span><i class="fa fa-bar-chart-o"></i> {{plural ../pagination.total empty=(t "No posts") singular=(t "% post") plural=(t "% posts")}}</span>
                 {{#if location}}<span><i class="fa fa-map-marker"></i>{{location}}</span>{{/if}}
                 {{#if website}}<span><i class="fa fa-link"></i><a href="{{website}}">{{website}}</a></span>{{/if}}
                 <span><i class="fa fa-rss-square"></i><a href="{{url}}rss/">{{name}}</a></span>
