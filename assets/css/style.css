@@ -635,7 +635,7 @@ table {
   max-width: 100vw;
 }
 
-.kg-gallery-container {
+.post-content.kg-gallery-container {
     display: flex;
     flex-direction: column;
     margin: 1.5em auto;
