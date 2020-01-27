@@ -1,4 +1,15 @@
 ------------------------------
+Ghostwriter Version 1.9.5
+------------------------------
+- (tylerfontaine) added ghost v3 compatibility
+
+------------------------------
+Ghostwriter Version 1.9.4
+------------------------------
+
+- (tylerfontaine) added ghost v2 compatibility
+
+------------------------------
 Ghostwriter Version 1.9.3
 ------------------------------
 
@@ -82,7 +93,7 @@ Ghostwriter Version 1.4.0
 - Added basic support for html tables
 - Added fitvid.js for responsive video support
 - Removed image icons
-- Replaced the browse posts button with a Browse Posts text link in 
+- Replaced the browse posts button with a Browse Posts text link in
   the new navigation menu. This should make finding the posts list
   easier for users.
 - Tidied up nested lists
